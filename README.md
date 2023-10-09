@@ -15,6 +15,6 @@ Proyecto Final del Grupo CodeHive<br>Año: 2023<br><br>Integrantes:<br>Andrés A
 ---
 [![](https://visitcount.itsvg.in/api?id=ProyectoFinalJava_CodeHive2023&icon=0&color=0)](https://visitcount.itsvg.in)
 
-### Notas! 📓
+### Notas!! 📓
 
 <!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
