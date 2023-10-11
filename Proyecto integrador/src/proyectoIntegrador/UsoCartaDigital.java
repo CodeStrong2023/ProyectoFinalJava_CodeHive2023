@@ -4,6 +4,8 @@ public class UsoCartaDigital {
 
 	public static void main(String[] args) {
 		
+		int opcionMenuPrincipal;
+		
 		
 		
 	
@@ -12,8 +14,9 @@ public class UsoCartaDigital {
 		CartaDigital menuPostre = new CartaDigital();
 		CartaDigital menuBebida = new CartaDigital();
 		*/
-
 		menuEntrada.dimeProductoPrecio();
+		menuEntrada.cantidadEntrada();
+		
 	}
 
 	

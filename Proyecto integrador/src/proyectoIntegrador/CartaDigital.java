@@ -1,4 +1,6 @@
 package proyectoIntegrador;
+import javax.swing.JOptionPane;
+import java.util.Scanner;
 
 public class CartaDigital {
 
@@ -26,8 +28,8 @@ public class CartaDigital {
 	
 	public CartaDigital() {
 		
-	entradas= new String[] {"Ensalada","Empanada","Bruschetta","Sopa"};
-	preciosEntradas=new double [] {1250,700,1450,1900};
+		entradas= new String[] {"Ensalada","Empanada","Bruschetta","Sopa"};
+		preciosEntradas=new double [] {1250,700,1450,1900};
 		
 		}
 	
@@ -38,17 +40,57 @@ public String dimeProductoPrecio() { //GETTER Al llamar este metodo nos mostrar√
         System.out.println((i+1)+" - "+entradas[i] + "......... $" + preciosEntradas[i]); 
 				
 	}
+	
+	System.out.println("Elige una opcion"); 
+	
 	return "Menu de entradas";
 	}
 
-public void estableceCantidades() {
+
+public void cantidadEntrada() {//Setter establece cantidades entrada
 	
-	while (i !=0) {
-		
-		
-		
-	}
+	
+	int opcionEntrada;
+	Scanner opcionEntradaa=new Scanner(System.in);
+	opcionEntrada=Integer.parseInt(opcionEntradaa.nextLine());
+	
+	   switch (opcionEntrada) {
+	   
+	   case 1:
+           System.out.println("Has elegido "+entradas[0]);
+           cantidadEntrada[opcionEntrada-1]=Integer.parseInt(JOptionPane.showInputDialog("Indique cantidad"));
+           break;
+           
+       case 2:
+    	   System.out.println("Has elegido "+entradas[1]);
+           cantidadEntrada[opcionEntrada-1]=Integer.parseInt(JOptionPane.showInputDialog("Indique cantidad"));
+           break;
+           
+       case 3:
+    	   System.out.println("Has elegido "+entradas[2]);
+           cantidadEntrada[opcionEntrada-1]=Integer.parseInt(JOptionPane.showInputDialog("Indique cantidad"));
+           break;
+           
+       case 4:
+    	   System.out.println("Has elegido "+entradas[3]);
+           cantidadEntrada[opcionEntrada-1]=Integer.parseInt(JOptionPane.showInputDialog("Indique cantidad"));
+           break;
+       
+       case 0:
+           // Salir del bucle si se elige la opci√≥n 0
+           System.out.println("Volviendo al menu principal");
+          
+           System.exit(0);
+	   
+	   }
+       
+	
+	
 }
+
+
+
+
 
 
 }
