@@ -6,25 +6,22 @@ public class UsoCartaDigital {
 		
 		int opcionMenuPrincipal;
 		
-		
+		System.out.println("Bienvenido a la Carta Virtual de CODEHIVE");
 		
 	
 		MenuEntrada menuEntrada = new MenuEntrada();//instanciamos objeto menu entrada
-		MenuPrincipal menuPlatoPrincipal= new MenuPrincipal();//instanciamos objeto menu plato principal
+		MenuPrincipal menuPrincipal= new MenuPrincipal();//instanciamos objeto menu plato principal
 		MenuPostre menuPostre = new MenuPostre();//Instanciamos objeto menu postre
-		MenuBebida menuBebida = new MenuBebida();
+		MenuBebida menuBebida = new MenuBebida();//Instanciamos objeto menu bebida
+		CartaDigital cartaDigital= new CartaDigital();//Instanciamos objeto que se conforma de los objetos anteriores.
 		
-		/*menuEntrada.dimeProductoPrecioEntrada();
-		menuEntrada.cantidadEntrada();*/
+	//Se ponen en los argumentos los objetos para poder ver las propiedades del mismo
+	//desde otra clase que no es la main. Tambine se podria haber hecho poniendo estos
+	//mismos argumentos dentro del objeto CartaDigital() y pasando dichas propiedades a
+	//su constructor. Es mas o menos lo mismo. A esto se lo conoce como "composicion".
+	cartaDigital.dimeMenu(menuEntrada,menuPrincipal,menuPostre,menuBebida);
 		
-	/*	menuPlatoPrincipal.dimeProductoPrecioPrincipal();
-		menuPlatoPrincipal.cantidadPrincipal();*/
-		
-		/*menuPostre.dimeProductoPrecioPostre();
-		menuPostre.cantidadPostre();*/
-		
-		menuBebida.dimeProductoPrecioBebida();
-		menuBebida.cantidadBebida();
+
 		
 	}
 

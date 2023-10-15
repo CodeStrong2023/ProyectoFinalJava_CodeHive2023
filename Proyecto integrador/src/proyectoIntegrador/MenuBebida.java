@@ -86,8 +86,8 @@ public class MenuBebida extends MenuEntrada{
 		       case 0:
 		           // Salir del bucle si se elige la opción 0
 		           System.out.println("Volviendo al menu principal \n");
-		          
-		           System.exit(0);
+		           
+		     
 		           
 		       default:
 		           System.out.println("Opción no válida. Por favor, elige del 0 al 5. \n");

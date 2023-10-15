@@ -8,21 +8,7 @@ public class MenuEntrada {
 	 	
 		private String [] entradas;
 		private double[] preciosEntradas ;
-		int[] cantidadEntrada ;
-	    
-	  /*  private String[] platosPrincipales = {"Milanesa","Lomito","Filette de salmon","Sorrentinos"};
-	    private double[] preciosPlatosPrincipales = {3400,4100,6400,2900};
-	    private int [] cantidadPlatosPrincipales;
-	    
-	    private String[] postres = {"Flan","Bombon escoces","Ensalada de frutas","Tiramisu"};
-	    private double[] preciosPostres={1300,1500,900,2000};
-	    private int [] cantidadPostres;
-	    
-	    private String[] bebidas = {"Agua sin Gas","Gaseosa","Vino de la casa","Cerveza"};
-	    private double[] preciosBebidas={900,1000,2100,1200};
-	    private int [] cantidadBebidas;*/
-	
-	
+		int[] cantidadEntrada ;	
 	
 	//Armamos el constructor
 	
