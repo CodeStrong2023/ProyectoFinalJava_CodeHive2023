@@ -3,7 +3,7 @@ package proyectoIntegrador;
 import java.util.Scanner;
 
 
-public class menuPostre extends CartaDigital {
+public class MenuPostre extends MenuEntrada {
 	
     	//Damos los atributos del menuPrincipal
 		private String [] postre;
@@ -11,7 +11,7 @@ public class menuPostre extends CartaDigital {
 		int[] cantidadPostre ;
 
 		
-	public menuPostre() {//Constructor del menu principal
+	public MenuPostre() {//Constructor del menu principal
 			
 			postre= new String[] {"Flan","Helado a eleccion","Cheescake","Ensalada de frutas"};
 			preciosPostre=new double [] {1300,1600,1800,950};
@@ -22,13 +22,13 @@ public class menuPostre extends CartaDigital {
 
 	public String dimeProductoPrecioPostre() { //GETTER Al llamar este metodo nos mostrará los datos precargados en el constructor
 		
-		System.out.println(" --------- POSTRES -------");
+		System.out.println(" --------- POSTRES ------- \n");
 		
 		for (int i = 0; i < postre.length; i++) {
 	        System.out.println((i+1)+" - "+postre[i] + "......... $" + preciosPostre[i]); 
 					
 		}
-		System.out.println("0 - Volver al menu principal");
+		System.out.println("0 - Volver al menu principal \n");
 
 		
 		return "Menu de Postres";
@@ -59,39 +59,39 @@ public class menuPostre extends CartaDigital {
 		   case 1:
 	           System.out.println("Has elegido "+postre[(opcionPostre-1)]+". Indique cantidad: ");
 	           cantidadPostre[(opcionPostre-1)]=Integer.parseInt(opcionPostreBis.nextLine());
-	           System.out.println("Usted ha seleccionado "+postre[(opcionPostre-1)]+" por "+cantidadPostre[(opcionPostre-1)]+" unidades.");
+	           System.out.println("Usted ha seleccionado "+postre[(opcionPostre-1)]+" por "+cantidadPostre[(opcionPostre-1)]+" unidades. \n");
 	           dimeProductoPrecioPostre();
 	           cantidadPostre();
 	       
 	       case 2:
 	    	   System.out.println("Has elegido "+postre[(opcionPostre-1)]+". Indique cantidad: ");
 	           cantidadPostre[(opcionPostre-1)]=Integer.parseInt(opcionPostreBis.nextLine());
-	           System.out.println("Usted ha seleccionado "+postre[(opcionPostre-1)]+" por "+cantidadPostre[(opcionPostre-1)]+" unidades.");
+	           System.out.println("Usted ha seleccionado "+postre[(opcionPostre-1)]+" por "+cantidadPostre[(opcionPostre-1)]+" unidades. \n");
 	           dimeProductoPrecioPostre();
 	           cantidadPostre();
 	           
 	       case 3:
 	    	   System.out.println("Has elegido "+postre[(opcionPostre-1)]+". Indique cantidad: ");
 	           cantidadPostre[(opcionPostre-1)]=Integer.parseInt(opcionPostreBis.nextLine());
-	           System.out.println("Usted ha seleccionado "+postre[(opcionPostre-1)]+" por "+cantidadPostre[(opcionPostre-1)]+" unidades.");
+	           System.out.println("Usted ha seleccionado "+postre[(opcionPostre-1)]+" por "+cantidadPostre[(opcionPostre-1)]+" unidades. \n");
 	           dimeProductoPrecioPostre();
 	           cantidadPostre();
 	           
 	       case 4:
 	    	   System.out.println("Has elegido "+postre[(opcionPostre-1)]+". Indique cantidad: ");
 	           cantidadPostre[(opcionPostre-1)]=Integer.parseInt(opcionPostreBis.nextLine());
-	           System.out.println("Usted ha seleccionado "+postre[(opcionPostre-1)]+" por "+cantidadPostre[(opcionPostre-1)]+" unidades.");
+	           System.out.println("Usted ha seleccionado "+postre[(opcionPostre-1)]+" por "+cantidadPostre[(opcionPostre-1)]+" unidades. \n");
 	           dimeProductoPrecioPostre();
 	           cantidadPostre();
 	       
 	       case 0:
 	           // Salir del bucle si se elige la opción 0
-	           System.out.println("Volviendo al menu principal");
+	           System.out.println("Volviendo al menu principal \n");
 	          
 	           System.exit(0);
 	           
 	       default:
-	           System.out.println("Opción no válida. Por favor, elige del 0 al 5.");
+	           System.out.println("Opción no válida. Por favor, elige del 0 al 5. \n");
 	           dimeProductoPrecioPostre();
 	           cantidadPostre();
 		   }

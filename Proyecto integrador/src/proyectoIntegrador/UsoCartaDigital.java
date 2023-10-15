@@ -9,10 +9,10 @@ public class UsoCartaDigital {
 		
 		
 	
-		CartaDigital menuEntrada = new CartaDigital();//instanciamos objeto menu entrada
-		menuPrincipal menuPlatoPrincipal= new menuPrincipal();//instanciamos objeto menu plato principal
-		menuPostre menuPostre = new menuPostre();//Instanciamos objeto menu postre
-		menuBebida menuBebida = new menuBebida();
+		MenuEntrada menuEntrada = new MenuEntrada();//instanciamos objeto menu entrada
+		MenuPrincipal menuPlatoPrincipal= new MenuPrincipal();//instanciamos objeto menu plato principal
+		MenuPostre menuPostre = new MenuPostre();//Instanciamos objeto menu postre
+		MenuBebida menuBebida = new MenuBebida();
 		
 		/*menuEntrada.dimeProductoPrecioEntrada();
 		menuEntrada.cantidadEntrada();*/
