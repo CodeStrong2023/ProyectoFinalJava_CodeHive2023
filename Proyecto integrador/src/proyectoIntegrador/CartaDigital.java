@@ -34,7 +34,7 @@ public class CartaDigital {
 	}
 	
 	
-public String dimeProductoPrecio() { //GETTER Al llamar este metodo nos mostrará los datos precargados en el constructor
+public String dimeProductoPrecioEntrada() { //GETTER Al llamar este metodo nos mostrará los datos precargados en el constructor
 	
 	System.out.println(" ------------ MENU ENTRADAS -----------");
 	
@@ -74,28 +74,28 @@ public void cantidadEntrada() {//Setter establece cantidades entrada
            System.out.println("Has elegido "+entradas[0]+". Indique cantidad: ");
            cantidadEntrada[0]=Integer.parseInt(opcionCantidadBis.nextLine());
            System.out.println("Usted ha seleccionado "+entradas[0]+" por "+cantidadEntrada[0]+" unidades.");
-           dimeProductoPrecio();
+           dimeProductoPrecioEntrada();
            cantidadEntrada();
            
        case 2:
            System.out.println("Has elegido "+entradas[1]+". Indique cantidad: ");
            cantidadEntrada[1]=Integer.parseInt(opcionCantidadBis.nextLine());
            System.out.println("Usted ha seleccionado "+entradas[1]+" por "+cantidadEntrada[1]+" unidades.");
-           dimeProductoPrecio();
+           dimeProductoPrecioEntrada();
            cantidadEntrada();
            
        case 3:
     	   System.out.println("Has elegido "+entradas[2]+". Indique cantidad: ");
            cantidadEntrada[2]=Integer.parseInt(opcionCantidadBis.nextLine());
            System.out.println("Usted ha seleccionado "+entradas[2]+" por "+cantidadEntrada[2]+" unidades.");
-           dimeProductoPrecio();
+           dimeProductoPrecioEntrada();
            cantidadEntrada();
            
        case 4:
     	   System.out.println("Has elegido "+entradas[3]+". Indique cantidad: ");
            cantidadEntrada[3]=Integer.parseInt(opcionCantidadBis.nextLine());
            System.out.println("Usted ha seleccionado "+entradas[3]+" por "+cantidadEntrada[3]+" unidades.");
-           dimeProductoPrecio();
+           dimeProductoPrecioEntrada();
            cantidadEntrada();
               
        
@@ -107,7 +107,7 @@ public void cantidadEntrada() {//Setter establece cantidades entrada
            
        default:
            System.out.println("Opción no válida. Por favor, elige del 0 al 5.");
-           dimeProductoPrecio();
+           dimeProductoPrecioEntrada();
            cantidadEntrada();
 	   }
 	
