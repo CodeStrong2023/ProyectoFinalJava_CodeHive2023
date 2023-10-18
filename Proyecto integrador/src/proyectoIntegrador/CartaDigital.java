@@ -37,8 +37,8 @@ public class CartaDigital {
 		   						{
 		      
 		   case 1:
-				menuEntrada.dimeProductoPrecioEntrada();
-				menuEntrada.cantidadEntrada();
+				menuEntrada.dimeProductoPrecioEntrada();//Getter menu entrada
+				menuEntrada.cantidadEntrada();//setter clase entrada
 	       
 	       case 2:
 	    	    menuPrincipal.dimeProductoPrecioPrincipal();

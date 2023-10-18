@@ -19,7 +19,8 @@ public class UsoCartaDigital {
 	//desde otra clase que no es la main. Tambine se podria haber hecho poniendo estos
 	//mismos argumentos dentro del objeto CartaDigital() y pasando dichas propiedades a
 	//su constructor. Es mas o menos lo mismo. A esto se lo conoce como "composicion".
-	cartaDigital.dimeMenu(menuEntrada,menuPrincipal,menuPostre,menuBebida);
+	
+		cartaDigital.dimeMenu(menuEntrada,menuPrincipal,menuPostre,menuBebida);
 		
 
 		

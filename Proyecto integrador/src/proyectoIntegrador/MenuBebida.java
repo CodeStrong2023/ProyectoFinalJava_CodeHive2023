@@ -2,7 +2,7 @@ package proyectoIntegrador;
 
 import java.util.Scanner;
 
-public class MenuBebida extends MenuEntrada{
+public class MenuBebida extends CartaDigital{
 
         	//Damos los atributos del menuPrincipal
 			private String [] bebida;
@@ -14,7 +14,7 @@ public class MenuBebida extends MenuEntrada{
 				
 				bebida= new String[] {"Agua sin Gas","Cerveza","Vino de la casa","Gaseosa"};
 				preciosBebida=new double [] {900,1300,1900,1050};
-				
+				cantidadBebida = new int [bebida.length];
 			}
 
 
@@ -30,7 +30,7 @@ public class MenuBebida extends MenuEntrada{
 			System.out.println("0 - Volver al menu principal \n");
 
 			
-			return "Menu de Bebidas";
+			return "Menu de Bebidas";//ver
 			}
 
 
@@ -38,7 +38,7 @@ public class MenuBebida extends MenuEntrada{
 			
 			
 			int opcionBebida;
-			cantidadBebida = new int [4];
+			
 			
 			Scanner opcionBebidaBis=new Scanner(System.in);//esta opcion de consola elige una de las 4 opciones de entrada
 			Scanner opcionCantidadBebidaBis=new Scanner(System.in);//Esta opcion de consola settea cantidades
@@ -99,4 +99,6 @@ public class MenuBebida extends MenuEntrada{
 			
 		}	
 	}
+
+
 

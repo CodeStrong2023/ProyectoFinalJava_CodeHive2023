@@ -3,7 +3,7 @@ package proyectoIntegrador;
 import java.util.Scanner;
 
 
-public class MenuPostre extends MenuEntrada {
+public class MenuPostre extends CartaDigital {
 	
     	//Damos los atributos del menuPrincipal
 		private String [] postre;
@@ -15,7 +15,7 @@ public class MenuPostre extends MenuEntrada {
 			
 			postre= new String[] {"Flan","Helado a eleccion","Cheescake","Ensalada de frutas"};
 			preciosPostre=new double [] {1300,1600,1800,950};
-			
+			cantidadPostre = new int [4];
 		}
 
 
@@ -39,7 +39,7 @@ public class MenuPostre extends MenuEntrada {
 		
 		
 		int opcionPostre;
-		cantidadPostre = new int [4];
+		
 		
 		Scanner opcionPostreBis=new Scanner(System.in);//esta opcion de consola elige una de las 4 opciones de entrada
 		Scanner opcionCantidadPostreBis=new Scanner(System.in);//Esta opcion de consola settea cantidades
@@ -88,7 +88,7 @@ public class MenuPostre extends MenuEntrada {
 	           // Salir del bucle si se elige la opción 0
 	           System.out.println("Volviendo al menu principal \n");
 	          
-	           System.exit(0);
+	           dimeMenu(null,null,null,null);
 	           
 	       default:
 	           System.out.println("Opción no válida. Por favor, elige del 0 al 5. \n");

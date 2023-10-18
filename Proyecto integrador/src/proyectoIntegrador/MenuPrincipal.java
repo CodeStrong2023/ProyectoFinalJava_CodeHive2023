@@ -2,7 +2,7 @@ package proyectoIntegrador;
 
 import java.util.Scanner;
 
-public class MenuPrincipal extends MenuEntrada {
+public class MenuPrincipal extends CartaDigital {
 	
 	//Damos los atributos del menuPrincipal
 	private String [] principal;
@@ -14,7 +14,7 @@ public MenuPrincipal() {//Constructor del menu principal
 		
 		principal= new String[] {"Milanea","Lomito","Ravioles con salsa","Sanguche veggie"};
 		preciosPrincipal=new double [] {3500,4100,3150,2700};
-		
+		cantidadPrincipal=new int [4];
 	}
 
 
@@ -38,7 +38,7 @@ public void cantidadPrincipal() {//Setter establece cantidades principal
 	
 	
 	int opcionPrincipal;
-	cantidadPrincipal=new int [4];
+	
 	
 	Scanner opcionPrincipalBis=new Scanner(System.in);//esta opcion de consola elige una de las 4 opciones de entrada
 	Scanner opcionCantidadPrincipalBis=new Scanner(System.in);//Esta opcion de consola settea cantidades
@@ -87,12 +87,12 @@ public void cantidadPrincipal() {//Setter establece cantidades principal
            // Salir del bucle si se elige la opción 0
            System.out.println("Volviendo al menu principal \n");
           
-           System.exit(0);
+           dimeMenu(null,null,null,null);
            
        default:
            System.out.println("Opción no válida. Por favor, elige del 0 al 5. \n");
            dimeProductoPrecioPrincipal();
-           cantidadEntrada();
+           cantidadPrincipal();
 	   }
 	
 	} while(opcionPrincipal !=0);

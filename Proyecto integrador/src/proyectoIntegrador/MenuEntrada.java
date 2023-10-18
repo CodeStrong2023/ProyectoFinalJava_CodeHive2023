@@ -2,13 +2,13 @@ package proyectoIntegrador;
 import java.util.Scanner;
 
 
-public class MenuEntrada {
+public class MenuEntrada extends CartaDigital {
 
 	//Definimos los atributos de la clase, o caracteristicas. Basicamente son todas las variables que contendra el menu
 	 	
 		private String [] entradas;
 		private double[] preciosEntradas ;
-		int[] cantidadEntrada ;	
+		public int[] cantidadEntrada ;	
 	
 	//Armamos el constructor
 	
@@ -16,7 +16,7 @@ public class MenuEntrada {
 		
 		entradas= new String[] {"Ensalada","Empanada","Bruschetta","Sopa"};
 		preciosEntradas=new double [] {1250,700,1450,1900};
-		
+		cantidadEntrada=new int [4];
 	}
 	
 	
@@ -39,7 +39,7 @@ public void cantidadEntrada() {//Setter establece cantidades entrada
 	
 	
 	int opcionEntrada;
-	cantidadEntrada=new int [4];
+	
 	
 	Scanner opcionEntradaBis=new Scanner(System.in);//esta opcion de consola elige una de las 4 opciones de entrada
 	Scanner opcionCantidadBis=new Scanner(System.in);//Esta opcion de consola settea cantidades
@@ -88,13 +88,13 @@ public void cantidadEntrada() {//Setter establece cantidades entrada
        case 0:
            // Salir del bucle si se elige la opción 0
            System.out.println("Volviendo al menu principal \n");
-          
-           System.exit(0);
+           dimeMenu(null,null,null,null);
+         
            
        default:
            System.out.println("Opción no válida. Por favor, elige del 0 al 5. \n");
            dimeProductoPrecioEntrada();
-           cantidadEntrada();
+           
 	   }
 	
 	} while(opcionEntrada !=0);
