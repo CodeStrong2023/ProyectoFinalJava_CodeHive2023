@@ -13,7 +13,12 @@ public class CartaDigital {
 	//Para poder ver los metodos de un objeto desde una clase que no es la main
 	//debemos meter en el argumento del metodo a los objetos. Eso se hace de la siguiente forma:
 	//nombre de la clase y nombre del objeto
-	public String dimeMenu(MenuEntrada menuEntrada, MenuPrincipal menuPrincipal, MenuPostre menuPostre, MenuBebida menuBebida) {  //GETTER Muestra las opciones posibles del menu principal
+	public String dimeMenu( ) {  //GETTER Muestra las opciones posibles del menu principal
+		
+		MenuEntrada menuEntrada = new MenuEntrada();
+		MenuPrincipal menuPrincipal= new MenuPrincipal();
+		MenuPostre menuPostre = new MenuPostre();
+		MenuBebida menuBebida = new MenuBebida();
 		
 		
 		System.out.println(" --------- NUESTRO MENU --------- \n");

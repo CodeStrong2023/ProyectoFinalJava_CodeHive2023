@@ -86,6 +86,7 @@ public class MenuBebida extends CartaDigital{
 		       case 0:
 		           // Salir del bucle si se elige la opción 0
 		           System.out.println("Volviendo al menu principal \n");
+		           dimeMenu();
 		           
 		     
 		           

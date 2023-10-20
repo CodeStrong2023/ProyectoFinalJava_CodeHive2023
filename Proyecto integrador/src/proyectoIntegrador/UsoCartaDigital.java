@@ -20,7 +20,7 @@ public class UsoCartaDigital {
 	//mismos argumentos dentro del objeto CartaDigital() y pasando dichas propiedades a
 	//su constructor. Es mas o menos lo mismo. A esto se lo conoce como "composicion".
 	
-		cartaDigital.dimeMenu(menuEntrada,menuPrincipal,menuPostre,menuBebida);
+		cartaDigital.dimeMenu();
 		
 
 		

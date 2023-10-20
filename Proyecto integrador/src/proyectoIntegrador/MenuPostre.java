@@ -88,7 +88,7 @@ public class MenuPostre extends CartaDigital {
 	           // Salir del bucle si se elige la opción 0
 	           System.out.println("Volviendo al menu principal \n");
 	          
-	           dimeMenu(null,null,null,null);
+	           dimeMenu();
 	           
 	       default:
 	           System.out.println("Opción no válida. Por favor, elige del 0 al 5. \n");
