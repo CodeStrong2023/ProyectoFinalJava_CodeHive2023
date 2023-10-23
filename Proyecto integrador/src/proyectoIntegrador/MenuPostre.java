@@ -8,14 +8,14 @@ public class MenuPostre extends CartaDigital {
     	//Damos los atributos del menuPrincipal
 		private String [] postre;
 		private double[] preciosPostre ;
-		int[] cantidadPostre ;
+		int[] cantidadPostre=new int [4]; ;
 
 		
 	public MenuPostre() {//Constructor del menu principal
 			
 			postre= new String[] {"Flan","Helado a eleccion","Cheescake","Ensalada de frutas"};
 			preciosPostre=new double [] {1300,1600,1800,950};
-			cantidadPostre = new int [4];
+			
 		}
 
 
@@ -59,28 +59,28 @@ public class MenuPostre extends CartaDigital {
 		   case 1:
 	           System.out.println("Has elegido "+postre[(opcionPostre-1)]+". Indique cantidad: ");
 	           cantidadPostre[(opcionPostre-1)]=Integer.parseInt(opcionPostreBis.nextLine());
-	           System.out.println("Usted ha seleccionado "+postre[(opcionPostre-1)]+" por "+cantidadPostre[(opcionPostre-1)]+" unidades. \n");
+	           System.out.println("Usted ha seleccionado "+postre[(opcionPostre-1)]+" por "+cantidadPostre[(opcionPostre-1)]+" unidades por un subtotal de "+cantidadPostre[(opcionPostre-1)]*preciosPostre[(opcionPostre-1)] +". \n");
 	           dimeProductoPrecioPostre();
 	           cantidadPostre();
 	       
 	       case 2:
 	    	   System.out.println("Has elegido "+postre[(opcionPostre-1)]+". Indique cantidad: ");
 	           cantidadPostre[(opcionPostre-1)]=Integer.parseInt(opcionPostreBis.nextLine());
-	           System.out.println("Usted ha seleccionado "+postre[(opcionPostre-1)]+" por "+cantidadPostre[(opcionPostre-1)]+" unidades. \n");
+	           System.out.println("Usted ha seleccionado "+postre[(opcionPostre-1)]+" por "+cantidadPostre[(opcionPostre-1)]+" unidades por un subtotal de "+cantidadPostre[(opcionPostre-1)]*preciosPostre[(opcionPostre-1)] +". \n");
 	           dimeProductoPrecioPostre();
 	           cantidadPostre();
 	           
 	       case 3:
 	    	   System.out.println("Has elegido "+postre[(opcionPostre-1)]+". Indique cantidad: ");
 	           cantidadPostre[(opcionPostre-1)]=Integer.parseInt(opcionPostreBis.nextLine());
-	           System.out.println("Usted ha seleccionado "+postre[(opcionPostre-1)]+" por "+cantidadPostre[(opcionPostre-1)]+" unidades. \n");
+	           System.out.println("Usted ha seleccionado "+postre[(opcionPostre-1)]+" por "+cantidadPostre[(opcionPostre-1)]+" unidades por un subtotal de "+cantidadPostre[(opcionPostre-1)]*preciosPostre[(opcionPostre-1)] +". \n");
 	           dimeProductoPrecioPostre();
 	           cantidadPostre();
 	           
 	       case 4:
 	    	   System.out.println("Has elegido "+postre[(opcionPostre-1)]+". Indique cantidad: ");
 	           cantidadPostre[(opcionPostre-1)]=Integer.parseInt(opcionPostreBis.nextLine());
-	           System.out.println("Usted ha seleccionado "+postre[(opcionPostre-1)]+" por "+cantidadPostre[(opcionPostre-1)]+" unidades. \n");
+	           System.out.println("Usted ha seleccionado "+postre[(opcionPostre-1)]+" por "+cantidadPostre[(opcionPostre-1)]+" unidades por un subtotal de "+cantidadPostre[(opcionPostre-1)]*preciosPostre[(opcionPostre-1)] +". \n");
 	           dimeProductoPrecioPostre();
 	           cantidadPostre();
 	       
@@ -99,4 +99,40 @@ public class MenuPostre extends CartaDigital {
 		} while(opcionPostre !=0);
 		
 	}	
+	
+	public String verPedidoPostre() {
+		
+		for (int i=0;i<postre.length;i++) {
+			
+			if(cantidadPostre[i]!=0) {
+				
+				System.out.println("Usted ha seleccionado: "+postre[i]+" ----- "+cantidadPostre[i]);
+				
+				
+			}
+			
+			
+		}
+		
+		return "";
+		
+	}	
+	
+	public void anularPedidoPostre() {
+		
+		
+		for (int i=0;i<postre.length;i++) {
+			
+			if(cantidadPostre[i]!=0) {
+				
+				cantidadPostre[i]=0;
+				
+				
+			}
+			
+			
+		}
+		
+
+	}
 }

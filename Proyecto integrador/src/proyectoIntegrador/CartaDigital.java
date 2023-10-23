@@ -4,10 +4,12 @@ import java.util.Scanner;
 public class CartaDigital {
 	
 	int opcionMenu;
+	int borrar;
 
+	
 	public CartaDigital() {//Constructor vacio
 		
-	
+
 	}
 	
 	//Para poder ver los metodos de un objeto desde una clase que no es la main
@@ -15,9 +17,9 @@ public class CartaDigital {
 	//nombre de la clase y nombre del objeto
 	public String dimeMenu( ) {  //GETTER Muestra las opciones posibles del menu principal
 		
-		MenuEntrada menuEntrada = new MenuEntrada();
-		MenuPrincipal menuPrincipal= new MenuPrincipal();
-		MenuPostre menuPostre = new MenuPostre();
+		MenuEntrada menuEntrada = new MenuEntrada();//instanciamos objeto menu entrada
+		MenuPrincipal menuPrincipal= new MenuPrincipal();//instanciamos objeto menu plato principal
+		MenuPostre menuPostre = new MenuPostre();//Instanciamos objeto menu postre
 		MenuBebida menuBebida = new MenuBebida();
 		
 		
@@ -37,6 +39,8 @@ public class CartaDigital {
 		opcionMenu=Integer.parseInt(opcionMenuBis.nextLine());
 		
 		do {
+			
+			
 		
 		switch (opcionMenu) //Segun la opcion que elija, sera la posicion dela rray cantidadEntrada[] que se llene
 		   						{
@@ -56,6 +60,69 @@ public class CartaDigital {
 	       case 4:
 	    	    menuBebida.dimeProductoPrecioBebida();
 	    	    menuBebida.cantidadBebida();
+	    	    
+	    	    
+	       case 5:
+	    	  
+	    	  
+	    	   menuEntrada.verPedidoEntrada();
+	    	   menuPrincipal.verPedidoPrincipal();
+	    	   menuBebida.verPedidoBebida();
+	    	   menuPostre.verPedidoPostre();
+	    	   dimeMenu();
+	    	   
+	       case 6:
+	    	   
+	    	System.out.println(" --------- ANULAR PEDIDO --------- \n");
+	   		System.out.println("1 - Anular Entradas ");
+	   		System.out.println("2 - Anular Platos Principales ");
+	   		System.out.println("3 - Anular Bebidas ");
+	   		System.out.println("4 - Anular Postres ");
+	   		System.out.println("5 - Anular todo el pedido ");
+	   		System.out.println("0 - Volver al Menu ");
+	   		
+	    	      	   
+	   		Scanner opcionBorrarBis=new Scanner(System.in);
+			borrar=Integer.parseInt(opcionBorrarBis.nextLine());
+	    		   
+	    		   
+	    		   switch (borrar) {
+	    		   
+	    		   case 1:
+	    			   menuEntrada.anularPedidoEntrada();
+	    			   System.out.println("Sus pedidos de Entrada han sido anulados ");
+	    			   dimeMenu();
+	    		   case 2:
+	    			   menuPrincipal.anularPedidoPrincipal();
+	    			   System.out.println("Sus pedidos de Plato Principal han sido anulados ");
+	    			   dimeMenu();
+	    		   case 3:
+	    			   menuBebida.anularPedidoBebida();
+	    			   System.out.println("Sus pedidos de Bebidas han sido anulados ");
+	    			   dimeMenu();
+	    		   case 4:
+	    			   menuPostre.anularPedidoPostre();
+	    			   System.out.println("Sus pedidos de Postre han sido anulados ");
+	    			   dimeMenu();
+	    			   
+	    		   case 5:
+	    			   menuEntrada.anularPedidoEntrada();
+	    			   menuPrincipal.anularPedidoPrincipal();
+	    			   menuBebida.anularPedidoBebida();
+	    			   menuPostre.anularPedidoPostre();
+	    			   System.out.println("Todos sus pedidos han sido anulados ");
+	    			   dimeMenu();
+	    		   default:
+			           System.out.println("Opción no válida. Por favor, elige del 0 al 5. \n");
+	    		   case 0:
+	    			   dimeMenu();
+	    		   }
+	    		  
+		    	   
+		    	   
+		    	   
+	    	    	   
+	    	  
 	       
 	       case 0:
 	           // Salir del bucle si se elige la opción 0

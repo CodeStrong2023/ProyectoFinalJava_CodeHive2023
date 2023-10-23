@@ -7,14 +7,14 @@ public class MenuBebida extends CartaDigital{
         	//Damos los atributos del menuPrincipal
 			private String [] bebida;
 			private double[] preciosBebida ;
-			int[] cantidadBebida ;
+			int[] cantidadBebida= new int [4]; 
 
 			
 		public MenuBebida() {//Constructor del menu principal
 				
 				bebida= new String[] {"Agua sin Gas","Cerveza","Vino de la casa","Gaseosa"};
 				preciosBebida=new double [] {900,1300,1900,1050};
-				cantidadBebida = new int [bebida.length];
+				
 			}
 
 
@@ -58,35 +58,35 @@ public class MenuBebida extends CartaDigital{
 			   case 1:
 		           System.out.println("Has elegido "+bebida[(opcionBebida-1)]+". Indique cantidad: ");
 		           cantidadBebida[(opcionBebida-1)]=Integer.parseInt(opcionBebidaBis.nextLine());
-		           System.out.println("Usted ha seleccionado "+bebida[(opcionBebida-1)]+" por "+cantidadBebida[(opcionBebida-1)]+" unidades. \n");
+		           System.out.println("Usted ha seleccionado "+bebida[(opcionBebida-1)]+" por "+cantidadBebida[(opcionBebida-1)]+" unidades por un subtotal de "+cantidadBebida[(opcionBebida-1)]*preciosBebida[(opcionBebida-1)] +". \n");
 		           dimeProductoPrecioBebida();
 		           cantidadBebida();
 		       
 		       case 2:
 		    	   System.out.println("Has elegido "+bebida[(opcionBebida-1)]+". Indique cantidad: ");
 		           cantidadBebida[(opcionBebida-1)]=Integer.parseInt(opcionBebidaBis.nextLine());
-		           System.out.println("Usted ha seleccionado "+bebida[(opcionBebida-1)]+" por "+cantidadBebida[(opcionBebida-1)]+" unidades. \n");
+		           System.out.println("Usted ha seleccionado "+bebida[(opcionBebida-1)]+" por "+cantidadBebida[(opcionBebida-1)]+" unidades por un subtotal de "+cantidadBebida[(opcionBebida-1)]*preciosBebida[(opcionBebida-1)] +". \n");
 		           dimeProductoPrecioBebida();
 		           cantidadBebida();
 		           
 		       case 3:
 		    	   System.out.println("Has elegido "+bebida[(opcionBebida-1)]+". Indique cantidad: ");
 		           cantidadBebida[(opcionBebida-1)]=Integer.parseInt(opcionBebidaBis.nextLine());
-		           System.out.println("Usted ha seleccionado "+bebida[(opcionBebida-1)]+" por "+cantidadBebida[(opcionBebida-1)]+" unidades. \n");
+		           System.out.println("Usted ha seleccionado "+bebida[(opcionBebida-1)]+" por "+cantidadBebida[(opcionBebida-1)]+" unidades por un subtotal de "+cantidadBebida[(opcionBebida-1)]*preciosBebida[(opcionBebida-1)] +". \n");
 		           dimeProductoPrecioBebida();
 		           cantidadBebida();
 		           
 		       case 4:
 		    	   System.out.println("Has elegido "+bebida[(opcionBebida-1)]+". Indique cantidad: ");
 		           cantidadBebida[(opcionBebida-1)]=Integer.parseInt(opcionBebidaBis.nextLine());
-		           System.out.println("Usted ha seleccionado "+bebida[(opcionBebida-1)]+" por "+cantidadBebida[(opcionBebida-1)]+" unidades. \n");
+		           System.out.println("Usted ha seleccionado "+bebida[(opcionBebida-1)]+" por "+cantidadBebida[(opcionBebida-1)]+" unidades por un subtotal de "+cantidadBebida[(opcionBebida-1)]*preciosBebida[(opcionBebida-1)] +". \n");
 		           dimeProductoPrecioBebida();
 		           cantidadBebida();
 		       
 		       case 0:
 		           // Salir del bucle si se elige la opción 0
 		           System.out.println("Volviendo al menu principal \n");
-		           dimeMenu();
+		           return;
 		           
 		     
 		           
@@ -98,7 +98,54 @@ public class MenuBebida extends CartaDigital{
 			
 			} while(opcionBebida !=0);
 			
+			
+			
+			
 		}	
+		
+		
+		public String verPedidoBebida() {
+			
+			
+			for (int i=0;i<bebida.length;i++) {
+				
+				if(cantidadBebida[i]!=0) {
+					
+					System.out.println("Usted ha seleccionado: "+bebida[i]+" ----- "+cantidadBebida[i]);
+					
+					
+				}
+				
+				
+			}
+			
+			return "";
+			
+		}	
+		
+	public void anularPedidoBebida() {
+			
+			
+			for (int i=0;i<bebida.length;i++) {
+				
+				if(cantidadBebida[i]!=0) {
+					
+					cantidadBebida[i]=0;
+					
+					
+				}
+				
+				
+			}
+			
+		
+	}
+		
+		
+		
+		
+		
+		
 	}
 
 

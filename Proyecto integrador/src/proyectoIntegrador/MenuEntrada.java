@@ -8,7 +8,7 @@ public class MenuEntrada extends CartaDigital {
 	 	
 		private String [] entradas;
 		private double[] preciosEntradas ;
-		public int[] cantidadEntrada ;	
+		public int[] cantidadEntrada=new int [4]; ;	
 	
 	//Armamos el constructor
 	
@@ -16,7 +16,7 @@ public class MenuEntrada extends CartaDigital {
 		
 		entradas= new String[] {"Ensalada","Empanada","Bruschetta","Sopa"};
 		preciosEntradas=new double [] {1250,700,1450,1900};
-		cantidadEntrada=new int [4];
+		
 	}
 	
 	
@@ -57,30 +57,34 @@ public void cantidadEntrada() {//Setter establece cantidades entrada
 	   						{
 	      
 	   case 1:
+		   
+		   System.out.println(cantidadEntrada[0]);
            System.out.println("Has elegido "+entradas[0]+". Indique cantidad: ");
            cantidadEntrada[0]=Integer.parseInt(opcionCantidadBis.nextLine());
-           System.out.println("Usted ha seleccionado "+entradas[0]+" por "+cantidadEntrada[0]+" unidades. \n");
+           System.out.println("Usted ha seleccionado "+entradas[(opcionEntrada-1)]+" por "+cantidadEntrada[(opcionEntrada-1)]+" unidades por un subtotal de "+cantidadEntrada[(opcionEntrada-1)]*preciosEntradas[(opcionEntrada-1)] +". \n");
+         
+           
            dimeProductoPrecioEntrada();
            cantidadEntrada();
            
        case 2:
            System.out.println("Has elegido "+entradas[1]+". Indique cantidad: ");
            cantidadEntrada[1]=Integer.parseInt(opcionCantidadBis.nextLine());
-           System.out.println("Usted ha seleccionado "+entradas[1]+" por "+cantidadEntrada[1]+" unidades. \n");
+           System.out.println("Usted ha seleccionado "+entradas[(opcionEntrada-1)]+" por "+cantidadEntrada[(opcionEntrada-1)]+" unidades por un subtotal de "+cantidadEntrada[(opcionEntrada-1)]*preciosEntradas[(opcionEntrada-1)] +". \n");
            dimeProductoPrecioEntrada();
            cantidadEntrada();
            
        case 3:
     	   System.out.println("Has elegido "+entradas[2]+". Indique cantidad: ");
            cantidadEntrada[2]=Integer.parseInt(opcionCantidadBis.nextLine());
-           System.out.println("Usted ha seleccionado "+entradas[2]+" por "+cantidadEntrada[2]+" unidades. \n");
+           System.out.println("Usted ha seleccionado "+entradas[(opcionEntrada-1)]+" por "+cantidadEntrada[(opcionEntrada-1)]+" unidades por un subtotal de "+cantidadEntrada[(opcionEntrada-1)]*preciosEntradas[(opcionEntrada-1)] +". \n");
            dimeProductoPrecioEntrada();
            cantidadEntrada();
            
        case 4:
     	   System.out.println("Has elegido "+entradas[3]+". Indique cantidad: ");
            cantidadEntrada[3]=Integer.parseInt(opcionCantidadBis.nextLine());
-           System.out.println("Usted ha seleccionado "+entradas[3]+" por "+cantidadEntrada[3]+" unidades. \n");
+           System.out.println("Usted ha seleccionado "+entradas[(opcionEntrada-1)]+" por "+cantidadEntrada[(opcionEntrada-1)]+" unidades por un subtotal de "+cantidadEntrada[(opcionEntrada-1)]*preciosEntradas[(opcionEntrada-1)] +". \n");
            dimeProductoPrecioEntrada();
            cantidadEntrada();
               
@@ -101,8 +105,41 @@ public void cantidadEntrada() {//Setter establece cantidades entrada
 	
 	
 }
+public String verPedidoEntrada() {
+	
+	System.out.println(cantidadEntrada[0]);
+	for (int i=0;i<entradas.length;i++) {
+		
+		if(cantidadEntrada[i]!=0) {
+			
+			System.out.println("Usted ha seleccionado: "+entradas[i]+" ----- "+cantidadEntrada[i]);
+			
+			
+		}
+		
+		
+	}
+	
+	return "";
+	
+}	
+public void anularPedidoEntrada() {
+	
+	
+	for (int i=0;i<entradas.length;i++) {
+		
+		if(cantidadEntrada[i]!=0) {
+			
+			cantidadEntrada[i]=0;
+			
+			
+		}
+		
+		
+	}
+	
 
-
+}
 
 }
 
