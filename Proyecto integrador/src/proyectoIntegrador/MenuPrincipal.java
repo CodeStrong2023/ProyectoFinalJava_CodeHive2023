@@ -7,7 +7,8 @@ public class MenuPrincipal extends CartaDigital {
 	//Damos los atributos del menuPrincipal
 	private String [] principal;
 	private double[] preciosPrincipal ;
-	int[] cantidadPrincipal=new int [4]; ;
+	int[] cantidadPrincipal=new int [4]; 
+	double subtotalPrincipal=0;
 
 	
 public MenuPrincipal() {//Constructor del menu principal
@@ -100,21 +101,21 @@ public void cantidadPrincipal() {//Setter establece cantidades principal
 	
 }
 
-public String verPedidoPrincipal() {
+public double verPedidoPrincipal() {
 	
 	for (int i=0;i<principal.length;i++) {
 		
 		if(cantidadPrincipal[i]!=0) {
 			
 			System.out.println("Usted ha seleccionado: "+principal[i]+" ----- "+cantidadPrincipal[i]);
-			
+			subtotalPrincipal=subtotalPrincipal+cantidadPrincipal[i]*preciosPrincipal[i];
 			
 		}
 		
 		
 	}
 	
-	return "";
+	return subtotalPrincipal;
 	
 }	
 

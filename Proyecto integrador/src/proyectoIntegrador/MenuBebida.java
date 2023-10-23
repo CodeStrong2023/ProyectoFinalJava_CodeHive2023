@@ -8,6 +8,7 @@ public class MenuBebida extends CartaDigital{
 			private String [] bebida;
 			private double[] preciosBebida ;
 			int[] cantidadBebida= new int [4]; 
+			double subtotalBebida=0;
 
 			
 		public MenuBebida() {//Constructor del menu principal
@@ -104,7 +105,7 @@ public class MenuBebida extends CartaDigital{
 		}	
 		
 		
-		public String verPedidoBebida() {
+		public double verPedidoBebida() {
 			
 			
 			for (int i=0;i<bebida.length;i++) {
@@ -112,14 +113,14 @@ public class MenuBebida extends CartaDigital{
 				if(cantidadBebida[i]!=0) {
 					
 					System.out.println("Usted ha seleccionado: "+bebida[i]+" ----- "+cantidadBebida[i]);
-					
+					subtotalBebida=subtotalBebida+cantidadBebida[i]*preciosBebida[i];
 					
 				}
 				
 				
 			}
 			
-			return "";
+			return subtotalBebida;
 			
 		}	
 		

@@ -8,7 +8,8 @@ public class MenuEntrada extends CartaDigital {
 	 	
 		private String [] entradas;
 		private double[] preciosEntradas ;
-		public int[] cantidadEntrada=new int [4]; ;	
+		public int[] cantidadEntrada=new int [4]; 
+		double subtotalEntrada=0;
 	
 	//Armamos el constructor
 	
@@ -58,7 +59,7 @@ public void cantidadEntrada() {//Setter establece cantidades entrada
 	      
 	   case 1:
 		   
-		   System.out.println(cantidadEntrada[0]);
+		 
            System.out.println("Has elegido "+entradas[0]+". Indique cantidad: ");
            cantidadEntrada[0]=Integer.parseInt(opcionCantidadBis.nextLine());
            System.out.println("Usted ha seleccionado "+entradas[(opcionEntrada-1)]+" por "+cantidadEntrada[(opcionEntrada-1)]+" unidades por un subtotal de "+cantidadEntrada[(opcionEntrada-1)]*preciosEntradas[(opcionEntrada-1)] +". \n");
@@ -105,7 +106,7 @@ public void cantidadEntrada() {//Setter establece cantidades entrada
 	
 	
 }
-public String verPedidoEntrada() {
+public double verPedidoEntrada() {
 	
 	System.out.println(cantidadEntrada[0]);
 	for (int i=0;i<entradas.length;i++) {
@@ -114,13 +115,13 @@ public String verPedidoEntrada() {
 			
 			System.out.println("Usted ha seleccionado: "+entradas[i]+" ----- "+cantidadEntrada[i]);
 			
-			
+			subtotalEntrada=subtotalEntrada+cantidadEntrada[i]*preciosEntradas[i];
 		}
 		
 		
 	}
 	
-	return "";
+	return subtotalEntrada;
 	
 }	
 public void anularPedidoEntrada() {

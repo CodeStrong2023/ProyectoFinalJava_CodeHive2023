@@ -5,7 +5,7 @@ public class CartaDigital {
 	
 	int opcionMenu;
 	int borrar;
-
+	double subtotal;
 	
 	public CartaDigital() {//Constructor vacio
 		
@@ -38,7 +38,7 @@ public class CartaDigital {
 		Scanner opcionMenuBis=new Scanner(System.in);
 		opcionMenu=Integer.parseInt(opcionMenuBis.nextLine());
 		
-		do {
+		
 			
 			
 		
@@ -119,25 +119,41 @@ public class CartaDigital {
 	    		   }
 	    		  
 		    	   
-		    	   
-		    	   
-	    	    	   
+	       case 7:
+	    	   
+	    	   System.out.println("RESUMEN DE PEDIDO");
+	    	   menuEntrada.verPedidoEntrada();
+	    	   menuPrincipal.verPedidoPrincipal();
+	    	   menuBebida.verPedidoBebida();
+	    	   menuPostre.verPedidoPostre();
+	    	   
+	    	   System.out.println("El total de su pedido es de "+subtotal+"$");
+	    	   System.out.println("Su pedido sera enviado tan pronto como sea posible");
+	    	   break;  
 	    	  
 	       
 	       case 0:
 	           // Salir del bucle si se elige la opción 0
 	           System.out.println("Lo esperamos pronto");
-	          
+	           break;
 	          
 	           
 		    default:
 		           System.out.println("Opción no válida. Por favor, elige del 0 al 5. \n");
-		          
+		          dimeMenu();
 	           
 		} 
 
-		}while(opcionMenu !=0);
+		
 		return "Menu";
+	}
+	
+	
+	public double calcularSubtotal(double subtotalBebida,double subtotalEntrada,double subtotalPostre,double subtotalPrincipal) {
+		
+		subtotal=subtotalBebida+subtotalEntrada+subtotalPrincipal+subtotalPostre;
+		return subtotal;
+		
 	}
 	
 }

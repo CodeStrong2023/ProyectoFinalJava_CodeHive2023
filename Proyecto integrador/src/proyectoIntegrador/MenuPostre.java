@@ -8,7 +8,8 @@ public class MenuPostre extends CartaDigital {
     	//Damos los atributos del menuPrincipal
 		private String [] postre;
 		private double[] preciosPostre ;
-		int[] cantidadPostre=new int [4]; ;
+		int[] cantidadPostre=new int [4]; 
+		double subtotalPostre=0;
 
 		
 	public MenuPostre() {//Constructor del menu principal
@@ -100,21 +101,21 @@ public class MenuPostre extends CartaDigital {
 		
 	}	
 	
-	public String verPedidoPostre() {
+	public double verPedidoPostre() {
 		
 		for (int i=0;i<postre.length;i++) {
 			
 			if(cantidadPostre[i]!=0) {
 				
 				System.out.println("Usted ha seleccionado: "+postre[i]+" ----- "+cantidadPostre[i]);
-				
+				subtotalPostre=subtotalPostre+cantidadPostre[i]*preciosPostre[i];
 				
 			}
 			
 			
 		}
 		
-		return "";
+		return subtotalPostre;
 		
 	}	
 	
