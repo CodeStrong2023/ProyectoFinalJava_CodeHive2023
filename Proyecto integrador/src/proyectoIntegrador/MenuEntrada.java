@@ -8,8 +8,8 @@ public class MenuEntrada extends CartaDigital {
 	 	
 		private String [] entradas;
 		private double[] preciosEntradas ;
-		public int[] cantidadEntrada=new int [4]; 
-		double subtotalEntrada=0;
+		public static int[] cantidadEntrada=new int [4]; 
+		public static double subtotalEntrada=0;
 	
 	//Armamos el constructor
 	

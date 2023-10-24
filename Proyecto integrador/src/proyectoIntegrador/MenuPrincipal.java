@@ -7,8 +7,8 @@ public class MenuPrincipal extends CartaDigital {
 	//Damos los atributos del menuPrincipal
 	private String [] principal;
 	private double[] preciosPrincipal ;
-	int[] cantidadPrincipal=new int [4]; 
-	double subtotalPrincipal=0;
+	public static int[] cantidadPrincipal=new int [4]; 
+    public static double subtotalPrincipal=0;
 
 	
 public MenuPrincipal() {//Constructor del menu principal

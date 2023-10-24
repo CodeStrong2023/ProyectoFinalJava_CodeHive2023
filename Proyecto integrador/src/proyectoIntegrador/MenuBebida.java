@@ -7,8 +7,8 @@ public class MenuBebida extends CartaDigital{
         	//Damos los atributos del menuPrincipal
 			private String [] bebida;
 			private double[] preciosBebida ;
-			int[] cantidadBebida= new int [4]; 
-			double subtotalBebida=0;
+			public static int[] cantidadBebida= new int [4]; 
+			public static double subtotalBebida=0;
 
 			
 		public MenuBebida() {//Constructor del menu principal
@@ -28,6 +28,8 @@ public class MenuBebida extends CartaDigital{
 		        System.out.println((i+1)+" - "+bebida[i] + "......... $" + preciosBebida[i]); 
 						
 			}
+			
+			System.out.println("5 - Ver pedido de bebidas");
 			System.out.println("0 - Volver al menu principal \n");
 
 			
@@ -57,6 +59,8 @@ public class MenuBebida extends CartaDigital{
 			   						{
 			      
 			   case 1:
+				   
+				  
 		           System.out.println("Has elegido "+bebida[(opcionBebida-1)]+". Indique cantidad: ");
 		           cantidadBebida[(opcionBebida-1)]=Integer.parseInt(opcionBebidaBis.nextLine());
 		           System.out.println("Usted ha seleccionado "+bebida[(opcionBebida-1)]+" por "+cantidadBebida[(opcionBebida-1)]+" unidades por un subtotal de "+cantidadBebida[(opcionBebida-1)]*preciosBebida[(opcionBebida-1)] +". \n");
@@ -83,11 +87,16 @@ public class MenuBebida extends CartaDigital{
 		           System.out.println("Usted ha seleccionado "+bebida[(opcionBebida-1)]+" por "+cantidadBebida[(opcionBebida-1)]+" unidades por un subtotal de "+cantidadBebida[(opcionBebida-1)]*preciosBebida[(opcionBebida-1)] +". \n");
 		           dimeProductoPrecioBebida();
 		           cantidadBebida();
+		         
+		       case 5:
+		    	   verPedidoBebida();
+		    	   dimeProductoPrecioBebida();
+		           cantidadBebida();
 		       
 		       case 0:
 		           // Salir del bucle si se elige la opción 0
 		           System.out.println("Volviendo al menu principal \n");
-		           return;
+		           dimeMenu();
 		           
 		     
 		           
@@ -120,6 +129,8 @@ public class MenuBebida extends CartaDigital{
 				
 			}
 			
+			System.out.println(subtotalBebida);
+			
 			return subtotalBebida;
 			
 		}	
@@ -139,6 +150,9 @@ public class MenuBebida extends CartaDigital{
 				
 			}
 			
+			
+	 
+	 
 		
 	}
 		

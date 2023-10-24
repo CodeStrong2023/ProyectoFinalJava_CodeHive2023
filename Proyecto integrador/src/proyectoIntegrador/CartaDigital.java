@@ -5,7 +5,7 @@ public class CartaDigital {
 	
 	int opcionMenu;
 	int borrar;
-	double subtotal;
+	
 	
 	public CartaDigital() {//Constructor vacio
 		
@@ -31,15 +31,13 @@ public class CartaDigital {
 		System.out.println("5 - Ver Pedido ");
 		System.out.println("6 - Anular Pedido ");
 		System.out.println("7 - Finalizar Pedido ");
-		System.out.println("8 - Salir  \n");
+		System.out.println("0 - Salir  \n");
 		
 		System.out.println("Elija una opcion");
 		
 		Scanner opcionMenuBis=new Scanner(System.in);
 		opcionMenu=Integer.parseInt(opcionMenuBis.nextLine());
 		
-		
-			
 			
 		
 		switch (opcionMenu) //Segun la opcion que elija, sera la posicion dela rray cantidadEntrada[] que se llene
@@ -72,7 +70,8 @@ public class CartaDigital {
 	    	   dimeMenu();
 	    	   
 	       case 6:
-	    	   
+	    	  
+	    	   do {  
 	    	System.out.println(" --------- ANULAR PEDIDO --------- \n");
 	   		System.out.println("1 - Anular Entradas ");
 	   		System.out.println("2 - Anular Platos Principales ");
@@ -114,9 +113,12 @@ public class CartaDigital {
 	    			   dimeMenu();
 	    		   default:
 			           System.out.println("Opción no válida. Por favor, elige del 0 al 5. \n");
+			           break;
 	    		   case 0:
 	    			   dimeMenu();
 	    		   }
+	    		   }while(borrar!=0);
+	    		   
 	    		  
 		    	   
 	       case 7:
@@ -127,6 +129,7 @@ public class CartaDigital {
 	    	   menuBebida.verPedidoBebida();
 	    	   menuPostre.verPedidoPostre();
 	    	   
+	    	   double subtotal=menuBebida.subtotalBebida+menuEntrada.subtotalEntrada+menuPostre.subtotalPostre+menuPrincipal.subtotalPrincipal;
 	    	   System.out.println("El total de su pedido es de "+subtotal+"$");
 	    	   System.out.println("Su pedido sera enviado tan pronto como sea posible");
 	    	   break;  
@@ -148,12 +151,8 @@ public class CartaDigital {
 		return "Menu";
 	}
 	
+
 	
-	public double calcularSubtotal(double subtotalBebida,double subtotalEntrada,double subtotalPostre,double subtotalPrincipal) {
-		
-		subtotal=subtotalBebida+subtotalEntrada+subtotalPrincipal+subtotalPostre;
-		return subtotal;
-		
-	}
+	
 	
 }
