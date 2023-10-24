@@ -5,7 +5,9 @@ import java.util.Scanner;
 public class MenuBebida extends CartaDigital{
 
         	//Damos los atributos del menuPrincipal
-			private String [] bebida;
+			private String [] bebida; //Con los modificadores private nos aseguramos que
+			//solo se pueda modificar estas variables desde la clase correspondiente.
+			//(Encapsulacion de variable)
 			private double[] preciosBebida ;
 			public static int[] cantidadBebida= new int [4]; 
 			public static double subtotalBebida=0;
@@ -24,7 +26,7 @@ public class MenuBebida extends CartaDigital{
 			
 			System.out.println(" --------- BEBIDAS --------- \n");
 			
-			for (int i = 0; i < bebida.length; i++) {
+			for (int i = 0; i < bebida.length; i++) {//Recorriendo el ciclo, podemos mostrar el contenido de las listas
 		        System.out.println((i+1)+" - "+bebida[i] + "......... $" + preciosBebida[i]); 
 						
 			}
@@ -40,7 +42,7 @@ public class MenuBebida extends CartaDigital{
 		public void cantidadBebida() {//Setter establece cantidades principal
 			
 			
-			int opcionBebida;
+			int opcionBebida;//variable que se declara dentro del metodo y solo se puede ver dentro del mismo
 			
 			
 			Scanner opcionBebidaBis=new Scanner(System.in);//esta opcion de consola elige una de las 4 opciones de entrada
