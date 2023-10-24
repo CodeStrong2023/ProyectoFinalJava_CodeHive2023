@@ -48,11 +48,11 @@ public void cantidadEntrada() {//Setter establece cantidades entrada
 	Scanner opcionCantidadBis=new Scanner(System.in);//Esta opcion de consola settea cantidades
 	
 	System.out.println("Indique una opcion: ");
+	
 	opcionEntrada=Integer.parseInt(opcionEntradaBis.nextLine());
 	
 	
 	
-	do {
 		
 	
 	
@@ -69,6 +69,7 @@ public void cantidadEntrada() {//Setter establece cantidades entrada
            
            dimeProductoPrecioEntrada();
            cantidadEntrada();
+           break;
            
        case 2:
            System.out.println("Has elegido "+entradas[1]+". Indique cantidad: ");
@@ -76,6 +77,7 @@ public void cantidadEntrada() {//Setter establece cantidades entrada
            System.out.println("Usted ha seleccionado "+entradas[(opcionEntrada-1)]+" por "+cantidadEntrada[(opcionEntrada-1)]+" unidades por un subtotal de "+cantidadEntrada[(opcionEntrada-1)]*preciosEntradas[(opcionEntrada-1)] +". \n");
            dimeProductoPrecioEntrada();
            cantidadEntrada();
+           break;
            
        case 3:
     	   System.out.println("Has elegido "+entradas[2]+". Indique cantidad: ");
@@ -83,6 +85,7 @@ public void cantidadEntrada() {//Setter establece cantidades entrada
            System.out.println("Usted ha seleccionado "+entradas[(opcionEntrada-1)]+" por "+cantidadEntrada[(opcionEntrada-1)]+" unidades por un subtotal de "+cantidadEntrada[(opcionEntrada-1)]*preciosEntradas[(opcionEntrada-1)] +". \n");
            dimeProductoPrecioEntrada();
            cantidadEntrada();
+           break;
            
        case 4:
     	   System.out.println("Has elegido "+entradas[3]+". Indique cantidad: ");
@@ -90,31 +93,38 @@ public void cantidadEntrada() {//Setter establece cantidades entrada
            System.out.println("Usted ha seleccionado "+entradas[(opcionEntrada-1)]+" por "+cantidadEntrada[(opcionEntrada-1)]+" unidades por un subtotal de "+cantidadEntrada[(opcionEntrada-1)]*preciosEntradas[(opcionEntrada-1)] +". \n");
            dimeProductoPrecioEntrada();
            cantidadEntrada();
+           break;
               
        case 5:
     	   verPedidoEntrada();
     	   dimeProductoPrecioEntrada();
            cantidadEntrada();
+           break;
            
        case 0:
            // Salir del bucle si se elige la opción 0
            System.out.println("Volviendo al menu principal \n");
-           dimeMenu();
+           break;
          
            
        default:
            System.out.println("Opción no válida. Por favor, elige del 0 al 5. \n");
            dimeProductoPrecioEntrada();
+           break;
            
 	   }
 	
-	} while(opcionEntrada !=0);
+	
 	
 	
 }
+
+
+
+
 public double verPedidoEntrada() {
 	
-	System.out.println(cantidadEntrada[0]);
+	
 	for (int i=0;i<entradas.length;i++) {
 		
 		if(cantidadEntrada[i]!=0) {

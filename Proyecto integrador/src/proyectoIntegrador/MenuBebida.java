@@ -53,8 +53,7 @@ public class MenuBebida extends CartaDigital{
 			
 			
 			
-			do {
-				
+		
 			
 			
 			switch (opcionBebida) //Segun la opcion que elija, sera la posicion dela rray cantidadEntrada[] que se llene
@@ -68,6 +67,7 @@ public class MenuBebida extends CartaDigital{
 		           System.out.println("Usted ha seleccionado "+bebida[(opcionBebida-1)]+" por "+cantidadBebida[(opcionBebida-1)]+" unidades por un subtotal de "+cantidadBebida[(opcionBebida-1)]*preciosBebida[(opcionBebida-1)] +". \n");
 		           dimeProductoPrecioBebida();
 		           cantidadBebida();
+		           break;
 		       
 		       case 2:
 		    	   System.out.println("Has elegido "+bebida[(opcionBebida-1)]+". Indique cantidad: ");
@@ -75,6 +75,7 @@ public class MenuBebida extends CartaDigital{
 		           System.out.println("Usted ha seleccionado "+bebida[(opcionBebida-1)]+" por "+cantidadBebida[(opcionBebida-1)]+" unidades por un subtotal de "+cantidadBebida[(opcionBebida-1)]*preciosBebida[(opcionBebida-1)] +". \n");
 		           dimeProductoPrecioBebida();
 		           cantidadBebida();
+		           break;
 		           
 		       case 3:
 		    	   System.out.println("Has elegido "+bebida[(opcionBebida-1)]+". Indique cantidad: ");
@@ -82,6 +83,7 @@ public class MenuBebida extends CartaDigital{
 		           System.out.println("Usted ha seleccionado "+bebida[(opcionBebida-1)]+" por "+cantidadBebida[(opcionBebida-1)]+" unidades por un subtotal de "+cantidadBebida[(opcionBebida-1)]*preciosBebida[(opcionBebida-1)] +". \n");
 		           dimeProductoPrecioBebida();
 		           cantidadBebida();
+		           break;
 		           
 		       case 4:
 		    	   System.out.println("Has elegido "+bebida[(opcionBebida-1)]+". Indique cantidad: ");
@@ -89,16 +91,18 @@ public class MenuBebida extends CartaDigital{
 		           System.out.println("Usted ha seleccionado "+bebida[(opcionBebida-1)]+" por "+cantidadBebida[(opcionBebida-1)]+" unidades por un subtotal de "+cantidadBebida[(opcionBebida-1)]*preciosBebida[(opcionBebida-1)] +". \n");
 		           dimeProductoPrecioBebida();
 		           cantidadBebida();
+		           break;
 		         
 		       case 5:
 		    	   verPedidoBebida();
 		    	   dimeProductoPrecioBebida();
 		           cantidadBebida();
+		           break;
 		       
 		       case 0:
 		           // Salir del bucle si se elige la opción 0
 		           System.out.println("Volviendo al menu principal \n");
-		           dimeMenu();
+		           break;
 		           
 		     
 		           
@@ -106,9 +110,10 @@ public class MenuBebida extends CartaDigital{
 		           System.out.println("Opción no válida. Por favor, elige del 0 al 5. \n");
 		           dimeProductoPrecioBebida();
 		           cantidadBebida();
+		           break;
 			   }
 			
-			} while(opcionBebida !=0);
+			
 			
 			
 			

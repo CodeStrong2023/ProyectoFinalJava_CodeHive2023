@@ -50,8 +50,7 @@ public void cantidadPrincipal() {//Setter establece cantidades principal
 	
 	
 	
-	do {
-		
+	
 	
 	
 	switch (opcionPrincipal) //Segun la opcion que elija, sera la posicion dela rray cantidadEntrada[] que se llene
@@ -63,6 +62,7 @@ public void cantidadPrincipal() {//Setter establece cantidades principal
            System.out.println("Usted ha seleccionado "+principal[(opcionPrincipal-1)]+" por "+cantidadPrincipal[(opcionPrincipal-1)]+" unidades por un subtotal de "+cantidadPrincipal[(opcionPrincipal-1)]*preciosPrincipal[(opcionPrincipal-1)] +". \n");
            dimeProductoPrecioPrincipal();
            cantidadPrincipal();
+           break;
          
        case 2:
     	   System.out.println("Has elegido "+principal[(opcionPrincipal-1)]+". Indique cantidad: ");
@@ -70,6 +70,7 @@ public void cantidadPrincipal() {//Setter establece cantidades principal
            System.out.println("Usted ha seleccionado "+principal[(opcionPrincipal-1)]+" por "+cantidadPrincipal[(opcionPrincipal-1)]+" unidades por un subtotal de "+cantidadPrincipal[(opcionPrincipal-1)]*preciosPrincipal[(opcionPrincipal-1)] +". \n");
            dimeProductoPrecioPrincipal();
            cantidadPrincipal();
+           break;
            
        case 3:
     	   System.out.println("Has elegido "+principal[(opcionPrincipal-1)]+". Indique cantidad: ");
@@ -77,6 +78,7 @@ public void cantidadPrincipal() {//Setter establece cantidades principal
            System.out.println("Usted ha seleccionado "+principal[(opcionPrincipal-1)]+" por "+cantidadPrincipal[(opcionPrincipal-1)]+" unidades por un subtotal de "+cantidadPrincipal[(opcionPrincipal-1)]*preciosPrincipal[(opcionPrincipal-1)] +". \n");
            dimeProductoPrecioPrincipal();
            cantidadPrincipal();
+           break;
            
        case 4:
     	   System.out.println("Has elegido "+principal[(opcionPrincipal-1)]+". Indique cantidad: ");
@@ -84,25 +86,28 @@ public void cantidadPrincipal() {//Setter establece cantidades principal
            System.out.println("Usted ha seleccionado "+principal[(opcionPrincipal-1)]+" por "+cantidadPrincipal[(opcionPrincipal-1)]+" unidades por un subtotal de "+cantidadPrincipal[(opcionPrincipal-1)]*preciosPrincipal[(opcionPrincipal-1)] +". \n");
            dimeProductoPrecioPrincipal();
            cantidadPrincipal();
+           break;
            
        case 5:
     	   verPedidoPrincipal();
     	   dimeProductoPrecioPrincipal();
            cantidadPrincipal();
-       
+           break;
+           
        case 0:
            // Salir del bucle si se elige la opción 0
            System.out.println("Volviendo al menu principal \n");
+          break;
           
-           dimeMenu();
            
        default:
            System.out.println("Opción no válida. Por favor, elige del 0 al 5. \n");
            dimeProductoPrecioPrincipal();
            cantidadPrincipal();
+           break;
 	   }
 	
-	} while(opcionPrincipal !=0);
+	
 	
 	
 }

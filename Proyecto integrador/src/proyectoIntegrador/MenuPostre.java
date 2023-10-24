@@ -51,7 +51,7 @@ public class MenuPostre extends CartaDigital {
 		
 		
 		
-		do {
+		
 			
 		
 		
@@ -64,6 +64,7 @@ public class MenuPostre extends CartaDigital {
 	           System.out.println("Usted ha seleccionado "+postre[(opcionPostre-1)]+" por "+cantidadPostre[(opcionPostre-1)]+" unidades por un subtotal de "+cantidadPostre[(opcionPostre-1)]*preciosPostre[(opcionPostre-1)] +". \n");
 	           dimeProductoPrecioPostre();
 	           cantidadPostre();
+	           break;
 	       
 	       case 2:
 	    	   System.out.println("Has elegido "+postre[(opcionPostre-1)]+". Indique cantidad: ");
@@ -71,6 +72,7 @@ public class MenuPostre extends CartaDigital {
 	           System.out.println("Usted ha seleccionado "+postre[(opcionPostre-1)]+" por "+cantidadPostre[(opcionPostre-1)]+" unidades por un subtotal de "+cantidadPostre[(opcionPostre-1)]*preciosPostre[(opcionPostre-1)] +". \n");
 	           dimeProductoPrecioPostre();
 	           cantidadPostre();
+	           break;
 	           
 	       case 3:
 	    	   System.out.println("Has elegido "+postre[(opcionPostre-1)]+". Indique cantidad: ");
@@ -78,6 +80,7 @@ public class MenuPostre extends CartaDigital {
 	           System.out.println("Usted ha seleccionado "+postre[(opcionPostre-1)]+" por "+cantidadPostre[(opcionPostre-1)]+" unidades por un subtotal de "+cantidadPostre[(opcionPostre-1)]*preciosPostre[(opcionPostre-1)] +". \n");
 	           dimeProductoPrecioPostre();
 	           cantidadPostre();
+	           break;
 	           
 	       case 4:
 	    	   System.out.println("Has elegido "+postre[(opcionPostre-1)]+". Indique cantidad: ");
@@ -85,27 +88,32 @@ public class MenuPostre extends CartaDigital {
 	           System.out.println("Usted ha seleccionado "+postre[(opcionPostre-1)]+" por "+cantidadPostre[(opcionPostre-1)]+" unidades por un subtotal de "+cantidadPostre[(opcionPostre-1)]*preciosPostre[(opcionPostre-1)] +". \n");
 	           dimeProductoPrecioPostre();
 	           cantidadPostre();
+	           break;
 	           
 	       case 5:
 	    	   verPedidoPostre();
 	    	   dimeProductoPrecioPostre();
 	           cantidadPostre();
+	           break;
 	       
 	       case 0:
 	           // Salir del bucle si se elige la opción 0
 	           System.out.println("Volviendo al menu principal \n");
 	          
-	           dimeMenu();
+	           break;
 	           
 	       default:
 	           System.out.println("Opción no válida. Por favor, elige del 0 al 5. \n");
 	           dimeProductoPrecioPostre();
 	           cantidadPostre();
+	           break;
 		   }
 		
-		} while(opcionPostre !=0);
+		
 		
 	}	
+	
+	
 	
 	public double verPedidoPostre() {
 		
