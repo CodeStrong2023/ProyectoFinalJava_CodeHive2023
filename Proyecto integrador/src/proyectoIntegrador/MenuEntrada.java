@@ -29,6 +29,8 @@ public String dimeProductoPrecioEntrada() { //GETTER Al llamar este metodo nos m
         System.out.println((i+1)+" - "+entradas[i] + "......... $" + preciosEntradas[i]); 
 				
 	}
+	
+	System.out.println("5 - Ver pedido de entrada");
 	System.out.println("0 - Volver al menu principal \n");
 
 	
@@ -89,7 +91,11 @@ public void cantidadEntrada() {//Setter establece cantidades entrada
            dimeProductoPrecioEntrada();
            cantidadEntrada();
               
-       
+       case 5:
+    	   verPedidoEntrada();
+    	   dimeProductoPrecioEntrada();
+           cantidadEntrada();
+           
        case 0:
            // Salir del bucle si se elige la opción 0
            System.out.println("Volviendo al menu principal \n");

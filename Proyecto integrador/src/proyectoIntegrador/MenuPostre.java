@@ -29,6 +29,7 @@ public class MenuPostre extends CartaDigital {
 	        System.out.println((i+1)+" - "+postre[i] + "......... $" + preciosPostre[i]); 
 					
 		}
+		System.out.println("5 - Ver pedido de Postre");
 		System.out.println("0 - Volver al menu principal \n");
 
 		
@@ -83,6 +84,11 @@ public class MenuPostre extends CartaDigital {
 	           cantidadPostre[(opcionPostre-1)]=Integer.parseInt(opcionPostreBis.nextLine());
 	           System.out.println("Usted ha seleccionado "+postre[(opcionPostre-1)]+" por "+cantidadPostre[(opcionPostre-1)]+" unidades por un subtotal de "+cantidadPostre[(opcionPostre-1)]*preciosPostre[(opcionPostre-1)] +". \n");
 	           dimeProductoPrecioPostre();
+	           cantidadPostre();
+	           
+	       case 5:
+	    	   verPedidoPostre();
+	    	   dimeProductoPrecioPostre();
 	           cantidadPostre();
 	       
 	       case 0:

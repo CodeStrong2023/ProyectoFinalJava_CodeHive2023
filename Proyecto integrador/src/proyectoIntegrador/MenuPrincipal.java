@@ -28,6 +28,7 @@ public String dimeProductoPrecioPrincipal() { //GETTER Al llamar este metodo nos
         System.out.println((i+1)+" - "+principal[i] + "......... $" + preciosPrincipal[i]); 
 				
 	}
+	System.out.println("5 - Ver pedido de plato principal");
 	System.out.println("0 - Volver al menu principal");
 
 	
@@ -82,6 +83,11 @@ public void cantidadPrincipal() {//Setter establece cantidades principal
            cantidadPrincipal[(opcionPrincipal-1)]=Integer.parseInt(opcionPrincipalBis.nextLine());
            System.out.println("Usted ha seleccionado "+principal[(opcionPrincipal-1)]+" por "+cantidadPrincipal[(opcionPrincipal-1)]+" unidades por un subtotal de "+cantidadPrincipal[(opcionPrincipal-1)]*preciosPrincipal[(opcionPrincipal-1)] +". \n");
            dimeProductoPrecioPrincipal();
+           cantidadPrincipal();
+           
+       case 5:
+    	   verPedidoPrincipal();
+    	   dimeProductoPrecioPrincipal();
            cantidadPrincipal();
        
        case 0:
