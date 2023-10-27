@@ -11,7 +11,7 @@ public class UsoCartaDigital {
 		
 		
 		
-		System.out.println("Bienvenido a la Carta Virtual de CODEHIVE");
+		System.out.println("Bienvenido a la Carta Virtual de CODEHIVE!!!\n");
 		
 	
 		MenuEntrada menuEntrada = new MenuEntrada();//instanciamos objeto menu entrada
@@ -88,19 +88,19 @@ public class UsoCartaDigital {
 	    		   
 	    		   case 1:
 	    			   menuEntrada.anularPedidoEntrada();
-	    			   System.out.println("Sus pedidos de Entrada han sido anulados ");
+	    			   System.out.println("Sus pedidos de Entrada han sido anulados \n");
 	    			   break;
 	    		   case 2:
 	    			   menuPrincipal.anularPedidoPrincipal();
-	    			   System.out.println("Sus pedidos de Plato Principal han sido anulados ");
+	    			   System.out.println("Sus pedidos de Plato Principal han sido anulados \n");
 	    			   break;
 	    		   case 3:
 	    			   menuBebida.anularPedidoBebida();
-	    			   System.out.println("Sus pedidos de Bebidas han sido anulados ");
+	    			   System.out.println("Sus pedidos de Bebidas han sido anulados \n");
 	    			   break;
 	    		   case 4:
 	    			   menuPostre.anularPedidoPostre();
-	    			   System.out.println("Sus pedidos de Postre han sido anulados ");
+	    			   System.out.println("Sus pedidos de Postre han sido anulados \n");
 	    			   break;
 	    			   
 	    		   case 5:
@@ -108,8 +108,10 @@ public class UsoCartaDigital {
 	    			   menuPrincipal.anularPedidoPrincipal();
 	    			   menuBebida.anularPedidoBebida();
 	    			   menuPostre.anularPedidoPostre();
-	    			   System.out.println("Todos sus pedidos han sido anulados ");
-	    			   break;
+	    			  
+	    			   
+	    			   System.out.println("Todos sus pedidos han sido anulados \n");
+	    			  
 	    		   default:
 			           System.out.println("Opción no válida. Por favor, elige del 0 al 5. \n");
 			           break;
@@ -123,12 +125,13 @@ public class UsoCartaDigital {
 	       case 7:
 	    	   
 	    	   System.out.println("RESUMEN DE PEDIDO");
-	    	   menuEntrada.verPedidoEntrada();
+	    	  menuEntrada.verPedidoEntrada();
 	    	   menuPrincipal.verPedidoPrincipal();
-	    	   menuBebida.verPedidoBebida();
+	    	  // menuBebida.verPedidoBebida();
 	    	   menuPostre.verPedidoPostre();
 	    	   
-	    	   double subtotal=menuBebida.subtotalBebida+menuEntrada.subtotalEntrada+menuPostre.subtotalPostre+menuPrincipal.subtotalPrincipal;
+	    	   double subtotal=menuBebida.verPedidoBebida()+menuPrincipal.verPedidoPrincipal()+menuPostre.verPedidoPostre()+menuEntrada.verPedidoEntrada();
+	    	   
 	    	   System.out.println("El total de su pedido es de "+subtotal+"$");
 	    	   System.out.println("Su pedido sera enviado tan pronto como sea posible");
 	    	   break;  
@@ -156,5 +159,5 @@ public class UsoCartaDigital {
 	}
 
 	
-
+	
 }

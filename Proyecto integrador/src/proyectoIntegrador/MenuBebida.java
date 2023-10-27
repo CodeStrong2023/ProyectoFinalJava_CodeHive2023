@@ -10,8 +10,8 @@ public class MenuBebida extends CartaDigital{
 			//(Encapsulacion de variable)
 			private double[] preciosBebida ;
 			public static int[] cantidadBebida= new int [4]; 
-			public static double subtotalBebida=0;
-
+			public static double[] subtotalBebida= new double[4];
+			public double subtotalBebidaTotal;
 			
 		public MenuBebida() {//Constructor del menu principal
 				
@@ -62,33 +62,41 @@ public class MenuBebida extends CartaDigital{
 			   case 1:
 				   
 				  
+				   subtotalBebida[opcionBebida-1]=0;
 		           System.out.println("Has elegido "+bebida[(opcionBebida-1)]+". Indique cantidad: ");
 		           cantidadBebida[(opcionBebida-1)]=Integer.parseInt(opcionBebidaBis.nextLine());
-		           System.out.println("Usted ha seleccionado "+bebida[(opcionBebida-1)]+" por "+cantidadBebida[(opcionBebida-1)]+" unidades por un subtotal de "+cantidadBebida[(opcionBebida-1)]*preciosBebida[(opcionBebida-1)] +". \n");
+		           System.out.println("Usted ha seleccionado "+bebida[(opcionBebida-1)]+" por "+cantidadBebida[(opcionBebida-1)]+" unidades por un subtotal de $"+cantidadBebida[(opcionBebida-1)]*preciosBebida[(opcionBebida-1)] +". \n");
 		           dimeProductoPrecioBebida();
 		           cantidadBebida();
 		           break;
 		       
 		       case 2:
+		    	   
+		    	
+		    	   subtotalBebida[opcionBebida-1]=0;
 		    	   System.out.println("Has elegido "+bebida[(opcionBebida-1)]+". Indique cantidad: ");
 		           cantidadBebida[(opcionBebida-1)]=Integer.parseInt(opcionBebidaBis.nextLine());
-		           System.out.println("Usted ha seleccionado "+bebida[(opcionBebida-1)]+" por "+cantidadBebida[(opcionBebida-1)]+" unidades por un subtotal de "+cantidadBebida[(opcionBebida-1)]*preciosBebida[(opcionBebida-1)] +". \n");
+		           System.out.println("Usted ha seleccionado "+bebida[(opcionBebida-1)]+" por "+cantidadBebida[(opcionBebida-1)]+" unidades por un subtotal de $"+cantidadBebida[(opcionBebida-1)]*preciosBebida[(opcionBebida-1)] +". \n");
 		           dimeProductoPrecioBebida();
 		           cantidadBebida();
 		           break;
 		           
 		       case 3:
+		    	   
+		    	   subtotalBebida[opcionBebida-1]=0;
 		    	   System.out.println("Has elegido "+bebida[(opcionBebida-1)]+". Indique cantidad: ");
 		           cantidadBebida[(opcionBebida-1)]=Integer.parseInt(opcionBebidaBis.nextLine());
-		           System.out.println("Usted ha seleccionado "+bebida[(opcionBebida-1)]+" por "+cantidadBebida[(opcionBebida-1)]+" unidades por un subtotal de "+cantidadBebida[(opcionBebida-1)]*preciosBebida[(opcionBebida-1)] +". \n");
+		           System.out.println("Usted ha seleccionado "+bebida[(opcionBebida-1)]+" por "+cantidadBebida[(opcionBebida-1)]+" unidades por un subtotal de $"+cantidadBebida[(opcionBebida-1)]*preciosBebida[(opcionBebida-1)] +". \n");
 		           dimeProductoPrecioBebida();
 		           cantidadBebida();
 		           break;
 		           
 		       case 4:
+		    	   
+		    	   subtotalBebida[opcionBebida-1]=0;
 		    	   System.out.println("Has elegido "+bebida[(opcionBebida-1)]+". Indique cantidad: ");
 		           cantidadBebida[(opcionBebida-1)]=Integer.parseInt(opcionBebidaBis.nextLine());
-		           System.out.println("Usted ha seleccionado "+bebida[(opcionBebida-1)]+" por "+cantidadBebida[(opcionBebida-1)]+" unidades por un subtotal de "+cantidadBebida[(opcionBebida-1)]*preciosBebida[(opcionBebida-1)] +". \n");
+		           System.out.println("Usted ha seleccionado "+bebida[(opcionBebida-1)]+" por "+cantidadBebida[(opcionBebida-1)]+" unidades por un subtotal de $"+cantidadBebida[(opcionBebida-1)]*preciosBebida[(opcionBebida-1)] +". \n");
 		           dimeProductoPrecioBebida();
 		           cantidadBebida();
 		           break;
@@ -128,17 +136,17 @@ public class MenuBebida extends CartaDigital{
 				
 				if(cantidadBebida[i]!=0) {
 					
-					System.out.println("Usted ha seleccionado: "+bebida[i]+" ----- "+cantidadBebida[i]);
-					subtotalBebida=subtotalBebida+cantidadBebida[i]*preciosBebida[i];
+					System.out.println("Usted ha seleccionado: "+bebida[i]+" ----- "+cantidadBebida[i]+" unidad/es.\n");
+					subtotalBebida[i]=cantidadBebida[i]*preciosBebida[i];
 					
 				}
 				
 				
 			}
 			
-			System.out.println(subtotalBebida);
+			//System.out.println("Subtotal bebidas ---------- $"+subtotalBebida);
 			
-			return subtotalBebida;
+			return subtotalBebidaTotal=subtotalBebida[0]+subtotalBebida[1]+subtotalBebida[2]+subtotalBebida[3];
 			
 		}	
 		

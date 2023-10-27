@@ -13,7 +13,7 @@ public class MenuPrincipal extends CartaDigital {
 	
 public MenuPrincipal() {//Constructor del menu principal
 		
-		principal= new String[] {"Milanea","Lomito","Ravioles con salsa","Sanguche veggie"};
+		principal= new String[] {"Milanesa","Lomito","Ravioles con salsa","Sanguche veggie"};
 		preciosPrincipal=new double [] {3500,4100,3150,2700};
 		
 	}
@@ -22,14 +22,14 @@ public MenuPrincipal() {//Constructor del menu principal
 
 public String dimeProductoPrecioPrincipal() { //GETTER Al llamar este metodo nos mostrará los datos precargados en el constructor
 	
-	System.out.println(" --------- PLATOS PRINCIPALES -------");
+	System.out.println(" --------- PLATOS PRINCIPALES -------\n");
 	
 	for (int i = 0; i < principal.length; i++) {
         System.out.println((i+1)+" - "+principal[i] + "......... $" + preciosPrincipal[i]); 
 				
 	}
 	System.out.println("5 - Ver pedido de plato principal");
-	System.out.println("0 - Volver al menu principal");
+	System.out.println("0 - Volver al menu principal \n");
 
 	
 	return "Menu de platos principales";
@@ -59,7 +59,7 @@ public void cantidadPrincipal() {//Setter establece cantidades principal
 	   case 1:
            System.out.println("Has elegido "+principal[(opcionPrincipal-1)]+". Indique cantidad: ");
            cantidadPrincipal[(opcionPrincipal-1)]=Integer.parseInt(opcionPrincipalBis.nextLine());
-           System.out.println("Usted ha seleccionado "+principal[(opcionPrincipal-1)]+" por "+cantidadPrincipal[(opcionPrincipal-1)]+" unidades por un subtotal de "+cantidadPrincipal[(opcionPrincipal-1)]*preciosPrincipal[(opcionPrincipal-1)] +". \n");
+           System.out.println("Usted ha seleccionado "+principal[(opcionPrincipal-1)]+" por "+cantidadPrincipal[(opcionPrincipal-1)]+" unidades por un subtotal de $"+cantidadPrincipal[(opcionPrincipal-1)]*preciosPrincipal[(opcionPrincipal-1)] +". \n");
            dimeProductoPrecioPrincipal();
            cantidadPrincipal();
            break;
@@ -67,7 +67,7 @@ public void cantidadPrincipal() {//Setter establece cantidades principal
        case 2:
     	   System.out.println("Has elegido "+principal[(opcionPrincipal-1)]+". Indique cantidad: ");
            cantidadPrincipal[(opcionPrincipal-1)]=Integer.parseInt(opcionPrincipalBis.nextLine());
-           System.out.println("Usted ha seleccionado "+principal[(opcionPrincipal-1)]+" por "+cantidadPrincipal[(opcionPrincipal-1)]+" unidades por un subtotal de "+cantidadPrincipal[(opcionPrincipal-1)]*preciosPrincipal[(opcionPrincipal-1)] +". \n");
+           System.out.println("Usted ha seleccionado "+principal[(opcionPrincipal-1)]+" por "+cantidadPrincipal[(opcionPrincipal-1)]+" unidades por un subtotal de $"+cantidadPrincipal[(opcionPrincipal-1)]*preciosPrincipal[(opcionPrincipal-1)] +". \n");
            dimeProductoPrecioPrincipal();
            cantidadPrincipal();
            break;
@@ -75,7 +75,7 @@ public void cantidadPrincipal() {//Setter establece cantidades principal
        case 3:
     	   System.out.println("Has elegido "+principal[(opcionPrincipal-1)]+". Indique cantidad: ");
            cantidadPrincipal[(opcionPrincipal-1)]=Integer.parseInt(opcionPrincipalBis.nextLine());
-           System.out.println("Usted ha seleccionado "+principal[(opcionPrincipal-1)]+" por "+cantidadPrincipal[(opcionPrincipal-1)]+" unidades por un subtotal de "+cantidadPrincipal[(opcionPrincipal-1)]*preciosPrincipal[(opcionPrincipal-1)] +". \n");
+           System.out.println("Usted ha seleccionado "+principal[(opcionPrincipal-1)]+" por "+cantidadPrincipal[(opcionPrincipal-1)]+" unidades por un subtotal de $"+cantidadPrincipal[(opcionPrincipal-1)]*preciosPrincipal[(opcionPrincipal-1)] +". \n");
            dimeProductoPrecioPrincipal();
            cantidadPrincipal();
            break;
@@ -83,7 +83,7 @@ public void cantidadPrincipal() {//Setter establece cantidades principal
        case 4:
     	   System.out.println("Has elegido "+principal[(opcionPrincipal-1)]+". Indique cantidad: ");
            cantidadPrincipal[(opcionPrincipal-1)]=Integer.parseInt(opcionPrincipalBis.nextLine());
-           System.out.println("Usted ha seleccionado "+principal[(opcionPrincipal-1)]+" por "+cantidadPrincipal[(opcionPrincipal-1)]+" unidades por un subtotal de "+cantidadPrincipal[(opcionPrincipal-1)]*preciosPrincipal[(opcionPrincipal-1)] +". \n");
+           System.out.println("Usted ha seleccionado "+principal[(opcionPrincipal-1)]+" por "+cantidadPrincipal[(opcionPrincipal-1)]+" unidades por un subtotal de $"+cantidadPrincipal[(opcionPrincipal-1)]*preciosPrincipal[(opcionPrincipal-1)] +". \n");
            dimeProductoPrecioPrincipal();
            cantidadPrincipal();
            break;
@@ -118,7 +118,7 @@ public double verPedidoPrincipal() {
 		
 		if(cantidadPrincipal[i]!=0) {
 			
-			System.out.println("Usted ha seleccionado: "+principal[i]+" ----- "+cantidadPrincipal[i]);
+			System.out.println("Usted ha seleccionado: "+principal[i]+" ----- "+cantidadPrincipal[i]+" unidad/es.\n");
 			subtotalPrincipal=subtotalPrincipal+cantidadPrincipal[i]*preciosPrincipal[i];
 			
 		}

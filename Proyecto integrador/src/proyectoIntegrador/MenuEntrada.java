@@ -9,8 +9,8 @@ public class MenuEntrada extends CartaDigital {
 		private String [] entradas;
 		private double[] preciosEntradas ;
 		public static int[] cantidadEntrada=new int [4]; 
-		public static double subtotalEntrada=0;
-	
+		public static double[] subtotalEntrada=new double[4];
+		
 	//Armamos el constructor
 	
 	public MenuEntrada() {
@@ -64,7 +64,7 @@ public void cantidadEntrada() {//Setter establece cantidades entrada
 		 
            System.out.println("Has elegido "+entradas[0]+". Indique cantidad: ");
            cantidadEntrada[0]=Integer.parseInt(opcionCantidadBis.nextLine());
-           System.out.println("Usted ha seleccionado "+entradas[(opcionEntrada-1)]+" por "+cantidadEntrada[(opcionEntrada-1)]+" unidades por un subtotal de "+cantidadEntrada[(opcionEntrada-1)]*preciosEntradas[(opcionEntrada-1)] +". \n");
+           System.out.println("Usted ha seleccionado "+entradas[(opcionEntrada-1)]+" por "+cantidadEntrada[(opcionEntrada-1)]+" unidades por un subtotal de $"+cantidadEntrada[(opcionEntrada-1)]*preciosEntradas[(opcionEntrada-1)] +". \n");
          
            
            dimeProductoPrecioEntrada();
@@ -74,7 +74,7 @@ public void cantidadEntrada() {//Setter establece cantidades entrada
        case 2:
            System.out.println("Has elegido "+entradas[1]+". Indique cantidad: ");
            cantidadEntrada[1]=Integer.parseInt(opcionCantidadBis.nextLine());
-           System.out.println("Usted ha seleccionado "+entradas[(opcionEntrada-1)]+" por "+cantidadEntrada[(opcionEntrada-1)]+" unidades por un subtotal de "+cantidadEntrada[(opcionEntrada-1)]*preciosEntradas[(opcionEntrada-1)] +". \n");
+           System.out.println("Usted ha seleccionado "+entradas[(opcionEntrada-1)]+" por "+cantidadEntrada[(opcionEntrada-1)]+" unidades por un subtotal de $"+cantidadEntrada[(opcionEntrada-1)]*preciosEntradas[(opcionEntrada-1)] +". \n");
            dimeProductoPrecioEntrada();
            cantidadEntrada();
            break;
@@ -82,7 +82,7 @@ public void cantidadEntrada() {//Setter establece cantidades entrada
        case 3:
     	   System.out.println("Has elegido "+entradas[2]+". Indique cantidad: ");
            cantidadEntrada[2]=Integer.parseInt(opcionCantidadBis.nextLine());
-           System.out.println("Usted ha seleccionado "+entradas[(opcionEntrada-1)]+" por "+cantidadEntrada[(opcionEntrada-1)]+" unidades por un subtotal de "+cantidadEntrada[(opcionEntrada-1)]*preciosEntradas[(opcionEntrada-1)] +". \n");
+           System.out.println("Usted ha seleccionado "+entradas[(opcionEntrada-1)]+" por "+cantidadEntrada[(opcionEntrada-1)]+" unidades por un subtotal de S"+cantidadEntrada[(opcionEntrada-1)]*preciosEntradas[(opcionEntrada-1)] +". \n");
            dimeProductoPrecioEntrada();
            cantidadEntrada();
            break;
@@ -90,7 +90,7 @@ public void cantidadEntrada() {//Setter establece cantidades entrada
        case 4:
     	   System.out.println("Has elegido "+entradas[3]+". Indique cantidad: ");
            cantidadEntrada[3]=Integer.parseInt(opcionCantidadBis.nextLine());
-           System.out.println("Usted ha seleccionado "+entradas[(opcionEntrada-1)]+" por "+cantidadEntrada[(opcionEntrada-1)]+" unidades por un subtotal de "+cantidadEntrada[(opcionEntrada-1)]*preciosEntradas[(opcionEntrada-1)] +". \n");
+           System.out.println("Usted ha seleccionado "+entradas[(opcionEntrada-1)]+" por "+cantidadEntrada[(opcionEntrada-1)]+" unidades por un subtotal de $"+cantidadEntrada[(opcionEntrada-1)]*preciosEntradas[(opcionEntrada-1)] +". \n");
            dimeProductoPrecioEntrada();
            cantidadEntrada();
            break;
@@ -129,7 +129,7 @@ public double verPedidoEntrada() {
 		
 		if(cantidadEntrada[i]!=0) {
 			
-			System.out.println("Usted ha seleccionado: "+entradas[i]+" ----- "+cantidadEntrada[i]);
+			System.out.println("Usted ha seleccionado: "+entradas[i]+" ----- "+cantidadEntrada[i]+" unidad/es.\n");
 			
 			subtotalEntrada=subtotalEntrada+cantidadEntrada[i]*preciosEntradas[i];
 		}
@@ -149,7 +149,7 @@ public void anularPedidoEntrada() {
 			
 			cantidadEntrada[i]=0;
 			
-			
+			subtotalEntrada=0;
 		}
 		
 		
