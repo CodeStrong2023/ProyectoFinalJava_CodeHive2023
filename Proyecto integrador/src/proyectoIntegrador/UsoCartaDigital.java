@@ -62,10 +62,12 @@ public class UsoCartaDigital {
 	       case 5:
 	    	  
 	    	  
-	    	   menuEntrada.verPedidoEntrada();
-	    	   menuPrincipal.verPedidoPrincipal();
-	    	   menuBebida.verPedidoBebida();
-	    	   menuPostre.verPedidoPostre();
+	    	//   menuEntrada.verPedidoEntrada();
+	    	//   menuPrincipal.verPedidoPrincipal();
+	    	 //  menuBebida.verPedidoBebida();
+	    	 //  menuPostre.verPedidoPostre();
+	    	   double subtotalVerPedido=menuBebida.verPedidoBebida()+menuPrincipal.verPedidoPrincipal()+menuPostre.verPedidoPostre()+menuEntrada.verPedidoEntrada();
+	    	   System.out.println("El total de su pedido es de "+subtotalVerPedido+"$\n");
 	    	   break;
 	    	   
 	       case 6:
@@ -124,11 +126,11 @@ public class UsoCartaDigital {
 		    	   
 	       case 7:
 	    	   
-	    	   System.out.println("RESUMEN DE PEDIDO");
-	    	  menuEntrada.verPedidoEntrada();
-	    	   menuPrincipal.verPedidoPrincipal();
+	    	   System.out.println("RESUMEN DE PEDIDO \n");
+	    	 // menuEntrada.verPedidoEntrada();
+	    	  // menuPrincipal.verPedidoPrincipal();
 	    	  // menuBebida.verPedidoBebida();
-	    	   menuPostre.verPedidoPostre();
+	    	 //  menuPostre.verPedidoPostre();
 	    	   
 	    	   double subtotal=menuBebida.verPedidoBebida()+menuPrincipal.verPedidoPrincipal()+menuPostre.verPedidoPostre()+menuEntrada.verPedidoEntrada();
 	    	   

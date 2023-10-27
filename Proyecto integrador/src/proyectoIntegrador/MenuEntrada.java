@@ -10,7 +10,7 @@ public class MenuEntrada extends CartaDigital {
 		private double[] preciosEntradas ;
 		public static int[] cantidadEntrada=new int [4]; 
 		public static double[] subtotalEntrada=new double[4];
-		
+		public double subtotalEntradaTotal;
 	//Armamos el constructor
 	
 	public MenuEntrada() {
@@ -61,7 +61,7 @@ public void cantidadEntrada() {//Setter establece cantidades entrada
 	      
 	   case 1:
 		   
-		 
+		   subtotalEntrada[opcionEntrada-1]=0;
            System.out.println("Has elegido "+entradas[0]+". Indique cantidad: ");
            cantidadEntrada[0]=Integer.parseInt(opcionCantidadBis.nextLine());
            System.out.println("Usted ha seleccionado "+entradas[(opcionEntrada-1)]+" por "+cantidadEntrada[(opcionEntrada-1)]+" unidades por un subtotal de $"+cantidadEntrada[(opcionEntrada-1)]*preciosEntradas[(opcionEntrada-1)] +". \n");
@@ -72,6 +72,7 @@ public void cantidadEntrada() {//Setter establece cantidades entrada
            break;
            
        case 2:
+    	   subtotalEntrada[opcionEntrada-1]=0;
            System.out.println("Has elegido "+entradas[1]+". Indique cantidad: ");
            cantidadEntrada[1]=Integer.parseInt(opcionCantidadBis.nextLine());
            System.out.println("Usted ha seleccionado "+entradas[(opcionEntrada-1)]+" por "+cantidadEntrada[(opcionEntrada-1)]+" unidades por un subtotal de $"+cantidadEntrada[(opcionEntrada-1)]*preciosEntradas[(opcionEntrada-1)] +". \n");
@@ -80,6 +81,7 @@ public void cantidadEntrada() {//Setter establece cantidades entrada
            break;
            
        case 3:
+    	   subtotalEntrada[opcionEntrada-1]=0;
     	   System.out.println("Has elegido "+entradas[2]+". Indique cantidad: ");
            cantidadEntrada[2]=Integer.parseInt(opcionCantidadBis.nextLine());
            System.out.println("Usted ha seleccionado "+entradas[(opcionEntrada-1)]+" por "+cantidadEntrada[(opcionEntrada-1)]+" unidades por un subtotal de S"+cantidadEntrada[(opcionEntrada-1)]*preciosEntradas[(opcionEntrada-1)] +". \n");
@@ -88,6 +90,7 @@ public void cantidadEntrada() {//Setter establece cantidades entrada
            break;
            
        case 4:
+    	   subtotalEntrada[opcionEntrada-1]=0;
     	   System.out.println("Has elegido "+entradas[3]+". Indique cantidad: ");
            cantidadEntrada[3]=Integer.parseInt(opcionCantidadBis.nextLine());
            System.out.println("Usted ha seleccionado "+entradas[(opcionEntrada-1)]+" por "+cantidadEntrada[(opcionEntrada-1)]+" unidades por un subtotal de $"+cantidadEntrada[(opcionEntrada-1)]*preciosEntradas[(opcionEntrada-1)] +". \n");
@@ -131,13 +134,13 @@ public double verPedidoEntrada() {
 			
 			System.out.println("Usted ha seleccionado: "+entradas[i]+" ----- "+cantidadEntrada[i]+" unidad/es.\n");
 			
-			subtotalEntrada=subtotalEntrada+cantidadEntrada[i]*preciosEntradas[i];
+			subtotalEntrada[i]=cantidadEntrada[i]*preciosEntradas[i];
 		}
 		
 		
 	}
 	
-	return subtotalEntrada;
+	return subtotalEntradaTotal=subtotalEntrada[0]+subtotalEntrada[1]+subtotalEntrada[2]+subtotalEntrada[3];
 	
 }	
 public void anularPedidoEntrada() {
@@ -149,7 +152,7 @@ public void anularPedidoEntrada() {
 			
 			cantidadEntrada[i]=0;
 			
-			subtotalEntrada=0;
+			
 		}
 		
 		
