@@ -1,17 +1,22 @@
 package proyectoIntegrador;
 
-import java.util.Scanner;
+import java.util.Scanner;//Para poder otorgar variables en consola clase Scanner
 
 public class MenuBebida extends CartaDigital{
 
-        	//Damos los atributos del menuPrincipal
+	//Damos los atributos del menuPrincipal
+	//Generamos arreglos que estan relacionados en cuanto a posicion con otro,
+	//es decir, posicion 0 de bebida corresponde a posicion 0 de precio y a pos 0 de cantidad y subtotal
+        	
 			private String [] bebida; //Con los modificadores private nos aseguramos que
 			//solo se pueda modificar estas variables desde la clase correspondiente.
 			//(Encapsulacion de variable)
 			private double[] preciosBebida ;
-			public static int[] cantidadBebida= new int [4]; 
-			public static double[] subtotalBebida= new double[4];
+			public static int[] cantidadBebida= new int [4]; //al ser estatica permite almacenar el valor cuando vos te salis de la clase
+			public static double[] subtotalBebida= new double[4];//idem variable anterior
 			public double subtotalBebidaTotal;
+			
+			
 			
 		public MenuBebida() {//Constructor del menu principal
 				
@@ -26,6 +31,7 @@ public class MenuBebida extends CartaDigital{
 			
 			System.out.println(" --------- BEBIDAS --------- \n");
 			
+			//Con el bucle se recorre automaticamente. Si hubieran 50 bebidas, recorre 50 posiciones
 			for (int i = 0; i < bebida.length; i++) {//Recorriendo el ciclo, podemos mostrar el contenido de las listas
 		        System.out.println((i+1)+" - "+bebida[i] + "......... $" + preciosBebida[i]); 
 						
@@ -35,7 +41,7 @@ public class MenuBebida extends CartaDigital{
 			System.out.println("0 - Volver al menu principal \n");
 
 			
-			return "Menu de Bebidas";//ver
+			return "Menu de Bebidas";//
 			}
 
 
@@ -62,11 +68,11 @@ public class MenuBebida extends CartaDigital{
 			   case 1:
 				   
 				  
-				   subtotalBebida[opcionBebida-1]=0;
-		           System.out.println("Has elegido "+bebida[(opcionBebida-1)]+". Indique cantidad: ");
+				   subtotalBebida[opcionBebida-1]=0;//Cada vez que ingresamos a el case1, el valor subtotal de la posicion 0 se resetea a 0
+		           System.out.println("Has elegido "+bebida[(opcionBebida-1)]+". Indique cantidad: ");//Muestra en pantalla lo seleccionado
 		           cantidadBebida[(opcionBebida-1)]=Integer.parseInt(opcionBebidaBis.nextLine());
 		           System.out.println("Usted ha seleccionado "+bebida[(opcionBebida-1)]+" por "+cantidadBebida[(opcionBebida-1)]+" unidades por un subtotal de $"+cantidadBebida[(opcionBebida-1)]*preciosBebida[(opcionBebida-1)] +". \n");
-		           dimeProductoPrecioBebida();
+		           dimeProductoPrecioBebida();//vuelve a leer el metodo y nos indica los productos
 		           cantidadBebida();
 		           break;
 		       
@@ -129,15 +135,15 @@ public class MenuBebida extends CartaDigital{
 		}	
 		
 		
-		public double verPedidoBebida() {
+		public double verPedidoBebida() {//Getter que muestra el pedido
 			
 			
-			for (int i=0;i<bebida.length;i++) {
+			for (int i=0;i<bebida.length;i++) {//a traves del bucle, recorre el arreglo cantidadBebida[]
 				
 				if(cantidadBebida[i]!=0) {
 					
 					System.out.println("Usted ha seleccionado: "+bebida[i]+" ----- "+cantidadBebida[i]+" unidad/es.\n");
-					subtotalBebida[i]=cantidadBebida[i]*preciosBebida[i];
+					subtotalBebida[i]=cantidadBebida[i]*preciosBebida[i];//es el subtotal de cada bebida posicion x posicion
 					
 				}
 				

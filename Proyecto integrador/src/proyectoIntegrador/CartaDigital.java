@@ -12,9 +12,7 @@ public class CartaDigital {
 
 	}
 	
-	//Para poder ver los metodos de un objeto desde una clase que no es la main
-	//debemos meter en el argumento del metodo a los objetos. Eso se hace de la siguiente forma:
-	//nombre de la clase y nombre del objeto
+	
 	public String dimeMenu( ) {  //GETTER Muestra las opciones posibles del menu principal
 		
 		
@@ -31,6 +29,7 @@ public class CartaDigital {
 		System.out.println("0 - Salir  \n");
 		
 		
+	
 		
 		return "Elija una opcion";
 	

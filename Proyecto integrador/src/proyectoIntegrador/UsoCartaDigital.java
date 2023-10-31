@@ -1,6 +1,8 @@
 package proyectoIntegrador;
 import java.util.Scanner;
 
+
+
 public class UsoCartaDigital {
 
 	public static void main(String[] args) {
@@ -20,10 +22,6 @@ public class UsoCartaDigital {
 		MenuBebida menuBebida = new MenuBebida();//Instanciamos objeto menu bebida
 	    CartaDigital cartaDigital= new CartaDigital();//Instanciamos objeto que se conforma de los objetos anteriores.
 		
-	//Se ponen en los argumentos los objetos para poder ver las propiedades del mismo
-	//desde otra clase que no es la main. Tambine se podria haber hecho poniendo estos
-	//mismos argumentos dentro del objeto CartaDigital() y pasando dichas propiedades a
-	//su constructor. Es mas o menos lo mismo. A esto se lo conoce como "composicion".
 	
 		
 		
@@ -45,27 +43,24 @@ public class UsoCartaDigital {
 				break;
 	       
 	       case 2:
-	    	    menuPrincipal.dimeProductoPrecioPrincipal();
-			    menuPrincipal.cantidadPrincipal();
+	    	    menuPrincipal.dimeProductoPrecioPrincipal();//muestra texto de atributos
+			    menuPrincipal.cantidadPrincipal();//modifica o setea cantidades SETTER
 			    break;
 	           
 	       case 3:
-	    	    menuPostre.dimeProductoPrecioPostre();
-				menuPostre.cantidadPostre();
+	    	    menuPostre.dimeProductoPrecioPostre();//muestra texto de atributos
+				menuPostre.cantidadPostre();//modifica o setea cantidades SETTER
 				break;
 	           
 	       case 4:
-	    	    menuBebida.dimeProductoPrecioBebida();
-	    	    menuBebida.cantidadBebida();
+	    	    menuBebida.dimeProductoPrecioBebida();//muestra texto de atributos
+	    	    menuBebida.cantidadBebida();//modifica o setea cantidades SETTER
 	    	    break;
 	    	    
 	       case 5:
 	    	  
 	    	  
-	    	//   menuEntrada.verPedidoEntrada();
-	    	//   menuPrincipal.verPedidoPrincipal();
-	    	 //  menuBebida.verPedidoBebida();
-	    	 //  menuPostre.verPedidoPostre();
+	    	
 	    	   double subtotalVerPedido=menuBebida.verPedidoBebida()+menuPrincipal.verPedidoPrincipal()+menuPostre.verPedidoPostre()+menuEntrada.verPedidoEntrada();
 	    	   System.out.println("El total de su pedido es de "+subtotalVerPedido+"$\n");
 	    	   break;
@@ -127,10 +122,7 @@ public class UsoCartaDigital {
 	       case 7:
 	    	   
 	    	   System.out.println("RESUMEN DE PEDIDO \n");
-	    	 // menuEntrada.verPedidoEntrada();
-	    	  // menuPrincipal.verPedidoPrincipal();
-	    	  // menuBebida.verPedidoBebida();
-	    	 //  menuPostre.verPedidoPostre();
+	    	 
 	    	   
 	    	   double subtotal=menuBebida.verPedidoBebida()+menuPrincipal.verPedidoPrincipal()+menuPostre.verPedidoPostre()+menuEntrada.verPedidoEntrada();
 	    	   
