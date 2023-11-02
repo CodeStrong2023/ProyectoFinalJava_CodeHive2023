@@ -145,7 +145,7 @@ public class UsoCartaDigital {
 
 		
 		
-	} while(opcionMenu !=7);
+	} while(opcionMenu !=7 && opcionMenu != 0 );
 	
 
 
