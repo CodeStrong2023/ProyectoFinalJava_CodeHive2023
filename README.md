@@ -10,6 +10,8 @@ Proyecto Final del Grupo CodeHive<br>Año: 2023<br><br>Integrantes:<br>Andrés A
 <!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
 
 Carta Digital
+
+
 Descripción
 La "Carta Digital" es una aplicación de menú interactiva diseñada para restaurantes que permite a los dueños ofrecer sus distintos platos y bebidas a través de una plataforma digital. La aplicación brinda la posibilidad a los clientes de interactuar con el menú, personalizar sus pedidos y obtener información detallada sobre los platos y bebidas disponibles. Además, muestra el costo total del pedido en tiempo real a medida que se añaden elementos al carrito. La "Carta Digital" está desarrollada en Java y proporciona una interfaz amigable para los usuarios y los propietarios de restaurantes.
 
