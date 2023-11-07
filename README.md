@@ -41,6 +41,7 @@ Eclipse IDE: Asegúrate de tener instalado el entorno de desarrollo Eclipse en t
 Apache NetBeans IDE: El proyecto también fue desarrollado y probado en el entorno de desarrollo Apache NetBeans. Puedes descargar Apache NetBeans desde el sitio web oficial de Apache NetBeans.https://netbeans.apache.org/front/main/download/
 
 Contribución
+
 Agradecemos cualquier contribución para mejorar y hacer crecer la "Carta Digital". Si deseas contribuir, sigue estos pasos:
 
 Realiza un fork del repositorio.
