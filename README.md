@@ -35,6 +35,11 @@ Cálculo del Costo: La aplicación mostrará el costo total del pedido en tiempo
 
 Anulación de Pedidos: Los usuarios pueden anular elementos del pedido si desean realizar cambios antes de confirmar la orden.
 
+Requisitos Previos
+
+Eclipse IDE: Asegúrate de tener instalado el entorno de desarrollo Eclipse en tu sistema. Puedes descargar Eclipse desde el sitio web oficial de Eclipse.https://eclipseide.org/
+Apache NetBeans IDE: El proyecto también fue desarrollado y probado en el entorno de desarrollo Apache NetBeans. Puedes descargar Apache NetBeans desde el sitio web oficial de Apache NetBeans.https://netbeans.apache.org/front/main/download/
+
 Contribución
 Agradecemos cualquier contribución para mejorar y hacer crecer la "Carta Digital". Si deseas contribuir, sigue estos pasos:
 
